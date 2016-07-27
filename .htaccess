@@ -1,0 +1,9 @@
+ErrorDocument 404 /sintacs/public/404.php
+
+Options +FollowSymLinks
+RewriteEngine On
+ 
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+ 
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
