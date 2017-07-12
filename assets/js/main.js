@@ -1,671 +1,448 @@
-"use strict";
-var timerset = false;
-$(document).ready(function () {
-    $( window ).resize();
-    setInterval(function () {showcasechange(2)}, 8000);
-    $('#contactform').validate({
-        rules: {
-            contactname: {
-                minlength: 2,
-                required: true
-            },
-            contactsurname: {
-                minlength: 2,
-                required: true
-            },
-            contactemail: {
-                required: true,
-                email: true
-            },
-            contactphone: {
-                minlength: 7,
-                required: true
-            },
-            contactmessage: {
-                minlength: 10,
-                required: true
-            },
-        },
-        highlight: function (element) {
-            $(element).closest('.control-group').removeClass('success').addClass('error');
-        },
-        success: function (element) {
-            element.text('OK!').addClass('valid')
-                .closest('.control-group').removeClass('error').addClass('success');
-        }
-    });
-    setbecomesponsorwriting();
-    document.getElementById('header-menu-area').onclick = function(){toggleresponsivemenu();};
-    document.getElementById('showcaseleftarrow').onclick = function(){showcasechange(1);};
-    document.getElementById('showcaserightarrow').onclick = function(){showcasechange(2);};
-    document.getElementById('home-inner-box-writing-area-close-button').onclick = function(){sponsorareatoggle(1);};
-    document.getElementById('content-news-arrow-left').onclick = function(){newschangenext(0);};
-    document.getElementById('content-news-arrow-right').onclick = function(){newschangenext(1);};
-    document.getElementById('content-news-arrow-right2').onclick = function(){newschangenext(1);};
-    document.getElementById('calendar-arrow-left').onclick = function(){calendarchangenext(0);};
-    document.getElementById('calendar-arrow-right').onclick = function(){calendarchangenext(1);};
-    document.getElementById('calendar-arrow-right2').onclick = function(){calendarchangenext(1);};
-    var numofresponsiveitems = $('.responsive-menu-item').length;
-    var i = 1;
-    while(i<=numofresponsiveitems){
-        if($('#responsive-menu-item-' + i).hasClass('responsive-menu-has-sub')){
-            setclicktoresponsive(i);
-        }
-        i++;
-    }
-    var numofmenuitems = $('.header-menu-item').length;
-    var i = 1;
-    while(i<=numofresponsiveitems){
-        if($('#header-menu-item-' + i).hasClass('header-menu-item-has-sub')){
-            setclicktomenu(i);
-        }
-        i++;
-    }
-    var numofshowcasepagination = $('.showcase-pagination-circle-item').length;
-    var i = 1;
-    while(i<=numofshowcasepagination){
-        setclicktopagination(i);
-        i++;
-    }
-    var numofsponsorbox = $('.becomesponsor-box').length;
-    var i = 1;
-    while(i<=numofsponsorbox){
-        setclicktosponsorbox(i);
-        i++;
-    }
-    var numofsponsormenubox = $('.becomesponsor-bg-box-area-menu-item').length;
-    var i = 1;
-    while(i<=numofsponsormenubox){
-        setclicktosponsormenubox(i);
-        i++;
-    }
-    setcalendarheights(1);
-    $(".fancybox").fancybox();
-    var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
-    if(isSafari == true && $(".contact-social-icons").length){
-        $(".contact-social-icons").addClass('not-anim');
-    }
-});
-$( window ).resize(function() {
-    setbecomesponsorwriting();
-    var wwidth= $(window).width();
-    var wheight= $(window).height();
-    if($('#showcase').length > 0){
-        var numofsc = $('.showcase-item').length;
-        var paginationtotallength = numofsc * 16 + (numofsc - 1) * 20;
-        var marginleftnumber = (wwidth - paginationtotallength) / 2;
-        $('.showcase-pagination').css("left",marginleftnumber + "px");
-    }
-    var numofsc = $('.calendar-show-item').length;
-    var i = 1;
-    var current = 0;
-    while(i<=numofsc){
-        if($('#calendar-show-item-' + i).hasClass('calendar-show-current')){
-            current = i;
-        }
-        i++;
-    }
-    setcalendarheights(current);
-});
-$(window).scroll(function() { //when window is scrolled
-    var scrollTop = $(window).scrollTop();
-    if (scrollTop > 0) {
-        $('#header').addClass('scrolled');
-    } else {
-        $('#header').removeClass('scrolled');
-    }
-    var numoficons = $('.page-icon-animation').length;
-    var i = 1;
-    var wheight = window.innerHeight;
-    while(i <= numoficons){
-        var scrollTop = $(window).scrollTop();
-        var position = $("#page-icon-" + i).offset();
-        var distance = position.top - scrollTop;
-        if(distance > 0){
-            var ratio = distance/wheight
-        }
-        else{
-            var ratio = 0;
-        }
-        
-        moveicon(i,ratio);
-        i++;
-    }
-  });
-function moveicon(id,ratio){
-    var moveright = ((ratio - 0.5) * 500) + 150;
-    var moveopac = (1 - ratio) / 2;
-    $("#page-icon-" + id).css('right', moveright + 'px');
-    $("#page-icon-" + id).css('opacity', moveopac);
-}
-function setclicktoresponsive(id){
-    document.getElementById('responsive-menu-item-' + id).onclick = function(){responsivesubtoggle(id);};
-}
-function setclicktomenu(id){
-    document.getElementById('header-menu-item-' + id).onmouseenter = function(){headersubopen(id);};
-    document.getElementById('header-menu-item-' + id).onmouseleave = function(){headersubclose(id);};
-    document.getElementById('headersub-' + id).onmouseenter = function(){headersubopen(id);};
-    document.getElementById('headersub-' + id).onmouseleave = function(){headersubclose(id);};
-}
-function setclicktopagination(id){
-    document.getElementById('showcase-pagination-' + id).onclick = function(){showcasego(id);};
-}
-function setclicktosponsorbox(id){
-    document.getElementById('various' + id).onclick = function(){sponsorareatoggle(id);};
-}
-function setclicktosponsormenubox(id){
-    document.getElementById('bbbami-' + id).onclick = function(){sponsorinnerareatoggle(id);};
-}
-function timeranim(eventdate){
-  $('#tte-month').countdown(eventdate, function(event) {
-    $(this).html(event.strftime('%w'));
-  });
-    $('#tte-day').countdown(eventdate, function(event) {
-    $(this).html(event.strftime('%d'));
-  });
-    $('#tte-hour').countdown(eventdate, function(event) {
-    $(this).html(event.strftime('%H'));
-  });
-    $('#tte-minute').countdown(eventdate, function(event) {
-    $(this).html(event.strftime('%M'));
-  });
-    
-    };
-function headersubclose(id){
-    $('#headersub-' + id).addClass('header-submenu-closed');
-    $('#headersubul-' + id).addClass('sub-hidden');
-}
-function headersubopen(id){
-    $('#headersub-' + id).removeClass('header-submenu-closed');
-    $('#headersubul-' + id).removeClass('sub-hidden');
-}
-function showcasechange(side){
-    var numofsc = $('.showcase-item').length;
-    var counter = 1;
-    var current = 0;
-    var next = 0;
-    var moves = 0;
-    while(counter<=numofsc){
-        if($('#showcase-' + counter).hasClass('showcase-current')){
-            current = counter;
-        }
-        counter++;
-    }
-    if(current > 0){
-        if(side === 2){
-            next = current + 1;
-            if(next <= numofsc){
-                $('#showcase-' + current).removeClass('showcase-current');
-                $('#showcase-' + current).addClass('showcase-left');
-                $('#showcase-pagination-' + current).removeClass('pagination-show');
-                $('#showcase-' + next).addClass('showcase-current');
-                $('#showcase-' + next).removeClass('showcase-right');
-                $('#showcase-pagination-' + next).addClass('pagination-show');
-                moves = 1;
-            }
-            if(next > numofsc){
-                var counter2 = 2;
-                while(counter2 <= numofsc){
-                    $('#showcase-' + counter2).removeClass('showcase-current');
-                    $('#showcase-' + counter2).removeClass('showcase-left');
-                    $('#showcase-' + counter2).addClass('showcase-right');
-                    $('#showcase-pagination-' + counter2).removeClass('pagination-show');
-                    counter2++;
-                }
-                $('#showcase-' + 1).addClass('showcase-current');
-                $('#showcase-' + 1).removeClass('showcase-left');
-                $('#showcase-' + 1).removeClass('showcase-right');
-                $('#showcase-pagination-' + 1).addClass('pagination-show');
-            }
-        }
-        if(side === 1){
-            next = current - 1;
-            if(next > 0){
-                $('#showcase-' + current).removeClass('showcase-current');
-                $('#showcase-' + current).addClass('showcase-right');
-                $('#showcase-pagination-' + current).removeClass('pagination-show');
-                $('#showcase-' + next).addClass('showcase-current');
-                $('#showcase-' + next).removeClass('showcase-left');
-                $('#showcase-pagination-' + next).addClass('pagination-show');
-                moves = 1;
-            }
-            if(next === 0){
-                var counter2 = 1;
-                while(counter2 < numofsc){
-                    $('#showcase-' + counter2).removeClass('showcase-current');
-                    $('#showcase-' + counter2).removeClass('showcase-right');
-                    $('#showcase-' + counter2).addClass('showcase-left');
-                    $('#showcase-pagination-' + counter2).removeClass('pagination-show');
-                    counter2++;
-                }
-                $('#showcase-' + numofsc).addClass('showcase-current');
-                $('#showcase-' + numofsc).removeClass('showcase-right');
-                $('#showcase-' + numofsc).removeClass('showcase-left');
-                $('#showcase-pagination-' + numofsc).addClass('pagination-show');
-            }
-        }
-    }
-}
-function showcasego(id){
-    var numofsc = $('.showcase-item').length;
-    var counter = 1;
-    var current = 0;
-    var next = id;
-    var moves = 0;
-    while(counter<=numofsc){
-        if($('#showcase-' + counter).hasClass('showcase-current')){
-            current = counter;
-        }
-        counter++;
-    }
-    if(current > 0){
-        if(next > current){
-            if(next <= numofsc){
-                $('#showcase-' + current).removeClass('showcase-current');
-                $('#showcase-' + current).addClass('showcase-left');
-                $('#showcase-pagination-' + current).removeClass('pagination-show');
-                var counter2 = current + 1;
-                while(counter2 < next){
-                    $('#showcase-' + counter2).removeClass('showcase-right');
-                    $('#showcase-' + counter2).addClass('showcase-left');
-                    counter2++;
-                }
-                $('#showcase-' + next).addClass('showcase-current');
-                $('#showcase-' + next).removeClass('showcase-right');
-                $('#showcase-' + next).removeClass('showcase-left');
-                $('#showcase-pagination-' + next).addClass('pagination-show');
-                moves = 1;
-            }
-        }
-        if(next < current){
-            if(next > 0){
-                $('#showcase-' + current).removeClass('showcase-current');
-                $('#showcase-' + current).addClass('showcase-right');
-                $('#showcase-pagination-' + current).removeClass('pagination-show');
-                var counter2 = current - 1;
-                while(counter2 > next){
-                    $('#showcase-' + counter2).removeClass('showcase-left');
-                    $('#showcase-' + counter2).addClass('showcase-right');
-                    counter2--;
-                }
-                $('#showcase-' + next).addClass('showcase-current');
-                $('#showcase-' + next).removeClass('showcase-right');
-                $('#showcase-' + next).removeClass('showcase-left');
-                $('#showcase-pagination-' + next).addClass('pagination-show');
-                moves = 1;
-            }
-        }
-    }
-}
-function setbecomesponsorwriting(){
-    var numofsc = $('.becomesponsor-bg-box-area-item').length;
-    var areaheight = $('.becomesponsor-bg-box-area-inner').height();
-    var i = 1;
-    while(i <= numofsc){
-        var itemheight = $('#becomesponsor-item-' + i).height();
-        var itemmargintop = (areaheight - itemheight) / 2 - 50;
-        document.getElementById('becomesponsor-item-' + i).style.marginTop = itemmargintop+"px";
-        i++;
-    }
-}
-function toggleresponsivemenu(){
-    $('body').toggleClass('body-screencap');
-    $('#responsive-menu-area').toggleClass('header-submenu-closed');
-    $('#responsive-menu').toggleClass('sub-hidden');
-    $('#header-menu-area').toggleClass('menu-open');
-}
-function responsivesubtoggle(id){
-    $('#responsive-sub-' + id).toggleClass('header-submenu-closed');
-}
-function sponsorareatoggle(id){
-    $('body').toggleClass('body-screencap');
-    $('#becomesponsor-bg-box-area').toggleClass('becomesponsor-bg-box-area-open');
-    sponsorinnerareatoggle(id);
-}
-function sponsorinnerareatoggle(id){
-    var numofsc = $('.becomesponsor-bg-box-area-item').length;
-    var i=1;
-    while(i<=numofsc){
-        $('#becomesponsor-item-' + i).removeClass('becomesponsor-bg-box-area-item-open');
-        i++;
-    }
-    $('#becomesponsor-item-' + id).addClass('becomesponsor-bg-box-area-item-open');
-    $('.becomesponsor-bg-box-area-menu ul li:nth-child(' + id + ')').addClass('selected');
-}
-function setcountdowntimer(countdowndate){
-    $(document).scroll(function() {
-            if(timerset === false){
-            var topPosCircle = $("#tte-month").offset().top;
-            var scrollTop = $(window).scrollTop();
-            var circledistance = topPosCircle - scrollTop;
-            var windowheight = $(window).height();
-            var animationpoint = windowheight - 150;
-            if (circledistance < animationpoint) {
-                timeranim(countdowndate);
-                $('#tte-month').addClass('timetoevent-amount-open');
-                $('#tte-day').addClass('timetoevent-amount-open');
-                $('#tte-hour').addClass('timetoevent-amount-open');
-                $('#tte-minute').addClass('timetoevent-amount-open');
-                timerset = true;
-            }
-                
-            }
+/*
+	Road Trip by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+*/
+
+(function($) {
+
+	skel.breakpoints({
+		xlarge:	'(max-width: 1680px)',
+		large:	'(max-width: 1280px)',
+		medium:	'(max-width: 980px)',
+		small:	'(max-width: 736px)',
+		xsmall:	'(max-width: 480px)'
+	});
+
+	$(function() {
+
+		var	$window = $(window),
+			$body = $('body'),
+			$header = $('#header'),
+			$banner = $('#banner');
+
+		var $height = $('#header').height();
+
+		// Disable animations/transitions until the page has loaded.
+			$body.addClass('is-loading');
+
+			$window.on('load', function() {
+				window.setTimeout(function() {
+					$body.removeClass('is-loading');
+				}, 100);
+			});
+
+		// Fix: Placeholder polyfill.
+			$('form').placeholder();
+
+		// Prioritize "important" elements on medium.
+			skel.on('+medium -medium', function() {
+				$.prioritize(
+					'.important\\28 medium\\29',
+					skel.breakpoint('medium').active
+				);
+			});
+
+		// Banner
+
+			if ($banner.length > 0) {
+
+				// IE: Height fix.
+					if (skel.vars.browser == 'ie'
+					&&	skel.vars.IEVersion > 9) {
+
+						skel.on('-small !small', function() {
+							$banner.css('height', '100vh');
+						});
+
+						skel.on('+small', function() {
+							$banner.css('height', '');
+						});
+
+					}
+
+				// More button.
+					$banner.find('.more')
+						.addClass('scrolly');
+
+			}
+
+
+		// Get BG Image
+
+			if ( $( ".bg-img" ).length ) {
+
+				$( ".bg-img" ).each(function() {
+
+					var post 	= $(this),
+						bg 		= post.data('bg');
+
+					post.css( 'background-image', 'url(images/' + bg + ')' );
+
+				});
+
+
+			}
+
+		// Posts
+
+			$( ".post" ).each( function() {
+				var p = $(this),
+					i = p.find('.inner'),
+					m = p.find('.more');
+
+				m.addClass('scrolly');
+
+				p.scrollex({
+					top: '40vh',
+					bottom: '40vh',
+					terminate: 	function() { m.removeClass('current'); i.removeClass('current'); },
+					enter: 		function() { m.addClass('current'); i.addClass('current'); },
+					leave: 		function() { m.removeClass('current'); i.removeClass('current'); }
+				});
+
+			});
+
+		// Scrolly.
+			if ( $( ".scrolly" ).length ) {
+
+				$('.scrolly').scrolly();
+			}
+
+		// Menu.
+			$('#menu')
+				.append('<a href="#menu" class="close"></a>')
+				.appendTo($body)
+				.panel({
+					delay: 500,
+					hideOnClick: true,
+					hideOnSwipe: true,
+					resetScroll: true,
+					resetForms: true,
+					side: 'right'
+				});
+
+	});
+
+	var map;
+      function initMap() {
+        // Create the map with no initial style specified.
+        // It therefore has default styling.
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -33.86, lng: 151.209},
+          zoom: 13,
+          mapTypeControl: false
         });
-}
-function newschangenext(side){
-    var numofsc = $('.content-news-area-item').length;
-    var i = 1;
-    var current = 0;
-    while(i<=numofsc){
-        if($('#news-item-' + i).hasClass('news-item-current')){
-            current = i;
-        }
-        i++;
-    }
-    if(side === 1){
-        var next = current + 1;
-        if(next > numofsc){
-            var next = 1;
-        }
-    }
-    if(side === 0){
-        var next = current - 1;
-        if(next < 1){
-            var next = numofsc;
-        }
-    }
-    newschange(next,numofsc);
-}
-function newschange(next,total){
-    var i = 1;
-    while(i <= total){
-        if(i < next){
-            $('#news-item-' + i).addClass('news-item-left');
-            $('#news-item-' + i).removeClass('news-item-right');
-            $('#news-item-' + i).removeClass('news-item-current');
-        }
-        else if(i === next){
-            $('#news-item-' + i).removeClass('news-item-left');
-            $('#news-item-' + i).removeClass('news-item-right');
-            $('#news-item-' + i).addClass('news-item-current');
-        }
-        else if(i > next){
-            $('#news-item-' + i).removeClass('news-item-left');
-            $('#news-item-' + i).addClass('news-item-right');
-            $('#news-item-' + i).removeClass('news-item-current');
-        }
-        i++;
-    }
-}
-function calendarchangenext(side){
-    var numofsc = $('.calendar-show-item').length;
-    var i = 1;
-    var current = 0;
-    while(i<=numofsc){
-        if($('#calendar-show-item-' + i).hasClass('calendar-show-current')){
-            current = i;
-        }
-        i++;
-    }
-    if(side === 1){
-        var next = current + 1;
-        if(next > numofsc){
-            var next = 1;
-        }
-    }
-    if(side === 0){
-        var next = current - 1;
-        if(next < 1){
-            var next = numofsc;
-        }
-    }
-    calendarchange(next,numofsc);
-    setcalendarheights(next);
-}
-function calendarchange(next,total){
-    var i = 1;
-    while(i <= total){
-        if(i < next){
-            $('#calendar-show-item-' + i).addClass('calendar-show-left');
-            $('#calendar-show-item-' + i).removeClass('calendar-show-right');
-            $('#calendar-show-item-' + i).removeClass('calendar-show-current');
-        }
-        else if(i === next){
-            $('#calendar-show-item-' + i).removeClass('calendar-show-left');
-            $('#calendar-show-item-' + i).removeClass('calendar-show-right');
-            $('#calendar-show-item-' + i).addClass('calendar-show-current');
-        }
-        else if(i > next){
-            $('#calendar-show-item-' + i).removeClass('calendar-show-left');
-            $('#calendar-show-item-' + i).addClass('calendar-show-right');
-            $('#calendar-show-item-' + i).removeClass('calendar-show-current');
-        }
-        i++;
-    }
-}
-function setcalendarheights(next){
-    var calendaritemheight = $('#calendar-show-item-' + next).height();
-    $('#calendar-show-area').css('height',calendaritemheight + 'px');
-    $('#calendar-show-area').css('max-height',calendaritemheight + 'px');
-    if(window.innerWidth > 992){
-        $('#calendar-arrow-left').css('height', calendaritemheight + 'px');
-        $('#calendar-arrow-left').css('max-height', calendaritemheight + 'px');
-        $('#calendar-arrow-left').css('line-height', calendaritemheight + 'px');
-        $('#calendar-arrow-right').css('height', calendaritemheight + 'px');
-        $('#calendar-arrow-right').css('max-height', calendaritemheight + 'px');
-        $('#calendar-arrow-right').css('line-height', calendaritemheight + 'px');
-        $('#calendar-arrow-right2').css('height', calendaritemheight + 'px');
-        $('#calendar-arrow-right2').css('max-height', calendaritemheight + 'px');
-        $('#calendar-arrow-right2').css('line-height', calendaritemheight + 'px');
-    }
-    else{
-        $('#calendar-arrow-left').css('height', '150px');
-        $('#calendar-arrow-left').css('max-height', '150px');
-        $('#calendar-arrow-left').css('line-height', '150px');
-        $('#calendar-arrow-right').css('height', '150px');
-        $('#calendar-arrow-right').css('max-height', '150px');
-        $('#calendar-arrow-right').css('line-height', '150px');
-        $('#calendar-arrow-right2').css('height', '150px');
-        $('#calendar-arrow-right2').css('max-height', '150px');
-        $('#calendar-arrow-right2').css('line-height', '150px');
-    }
-}
 
-        
-function initmap() {
-                // Basic options for a simple Google Map
-                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-                var mapOptions = {
-                    // How zoomed in you want the map to start at (always required)
-                    zoom: 15,
-                    scrollwheel: false,
-                    // The latitude and longitude to center the map (always required)
-                    center: new google.maps.LatLng(51.507883, -0.170171), // New York
+        // Add a style-selector control to the map.
+        var styleControl = document.getElementById('style-selector-control');
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(styleControl);
 
-                    // How you would like to style the map. 
-                    // This is where you would paste any style found on Snazzy Maps.
-                    styles: [
-    {
-        "featureType": "administrative",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#a7a7a7"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#737373"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#efefef"
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#dadada"
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "labels",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "labels.icon",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "color": "#696969"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "labels.icon",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#b3b3b3"
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "color": "#d6d6d6"
-            }
-        ]
-    },
-    {
-        "featureType": "road.local",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#ffffff"
-            },
-            {
-                "weight": 1.8
-            }
-        ]
-    },
-    {
-        "featureType": "road.local",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "color": "#d7d7d7"
-            }
-        ]
-    },
-    {
-        "featureType": "transit",
-        "elementType": "all",
-        "stylers": [
-            {
-                "color": "#808080"
-            },
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#c5d8e7"
-            }
-        ]
-    }
-]
-                };
+        // Set the map's style to the initial value of the selector.
+        var styleSelector = document.getElementById('style-selector');
+        map.setOptions({styles: styles[styleSelector.value]});
 
-                // Get the HTML DOM element that will contain your map 
-                // We are using a div with id="map" seen below in the <body>
-                var mapElement = document.getElementById('contact-mid');
+        // Apply new JSON when the user selects a different style.
+        styleSelector.addEventListener('change', function() {
+          map.setOptions({styles: styles[styleSelector.value]});
+        });
+      }
 
-                // Create the Google Map using our element and options defined above
-                var map = new google.maps.Map(mapElement, mapOptions);
+      var styles = {
+        default: null,
+        silver: [
+          {
+            elementType: 'geometry',
+            stylers: [{color: '#f5f5f5'}]
+          },
+          {
+            elementType: 'labels.icon',
+            stylers: [{visibility: 'off'}]
+          },
+          {
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#616161'}]
+          },
+          {
+            elementType: 'labels.text.stroke',
+            stylers: [{color: '#f5f5f5'}]
+          },
+          {
+            featureType: 'administrative.land_parcel',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#bdbdbd'}]
+          },
+          {
+            featureType: 'poi',
+            elementType: 'geometry',
+            stylers: [{color: '#eeeeee'}]
+          },
+          {
+            featureType: 'poi',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#757575'}]
+          },
+          {
+            featureType: 'poi.park',
+            elementType: 'geometry',
+            stylers: [{color: '#e5e5e5'}]
+          },
+          {
+            featureType: 'poi.park',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#9e9e9e'}]
+          },
+          {
+            featureType: 'road',
+            elementType: 'geometry',
+            stylers: [{color: '#ffffff'}]
+          },
+          {
+            featureType: 'road.arterial',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#757575'}]
+          },
+          {
+            featureType: 'road.highway',
+            elementType: 'geometry',
+            stylers: [{color: '#dadada'}]
+          },
+          {
+            featureType: 'road.highway',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#616161'}]
+          },
+          {
+            featureType: 'road.local',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#9e9e9e'}]
+          },
+          {
+            featureType: 'transit.line',
+            elementType: 'geometry',
+            stylers: [{color: '#e5e5e5'}]
+          },
+          {
+            featureType: 'transit.station',
+            elementType: 'geometry',
+            stylers: [{color: '#eeeeee'}]
+          },
+          {
+            featureType: 'water',
+            elementType: 'geometry',
+            stylers: [{color: '#c9c9c9'}]
+          },
+          {
+            featureType: 'water',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#9e9e9e'}]
+          }
+        ],
 
-                // Let's also add a marker while we're at it
-                var gmarker = {url: 'assets/images/mapicon.png',
-                scaledSize: new google.maps.Size(27, 38)};
-            var beachMarker = new google.maps.Marker({
-            position: new google.maps.LatLng(51.507883, -0.170171),
-            map: map,
-            icon: gmarker
-  });
-            }
+        night: [
+          {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+          {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+          {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+          {
+            featureType: 'administrative.locality',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#d59563'}]
+          },
+          {
+            featureType: 'poi',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#d59563'}]
+          },
+          {
+            featureType: 'poi.park',
+            elementType: 'geometry',
+            stylers: [{color: '#263c3f'}]
+          },
+          {
+            featureType: 'poi.park',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#6b9a76'}]
+          },
+          {
+            featureType: 'road',
+            elementType: 'geometry',
+            stylers: [{color: '#38414e'}]
+          },
+          {
+            featureType: 'road',
+            elementType: 'geometry.stroke',
+            stylers: [{color: '#212a37'}]
+          },
+          {
+            featureType: 'road',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#9ca5b3'}]
+          },
+          {
+            featureType: 'road.highway',
+            elementType: 'geometry',
+            stylers: [{color: '#746855'}]
+          },
+          {
+            featureType: 'road.highway',
+            elementType: 'geometry.stroke',
+            stylers: [{color: '#1f2835'}]
+          },
+          {
+            featureType: 'road.highway',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#f3d19c'}]
+          },
+          {
+            featureType: 'transit',
+            elementType: 'geometry',
+            stylers: [{color: '#2f3948'}]
+          },
+          {
+            featureType: 'transit.station',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#d59563'}]
+          },
+          {
+            featureType: 'water',
+            elementType: 'geometry',
+            stylers: [{color: '#17263c'}]
+          },
+          {
+            featureType: 'water',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#515c6d'}]
+          },
+          {
+            featureType: 'water',
+            elementType: 'labels.text.stroke',
+            stylers: [{color: '#17263c'}]
+          }
+        ],
+
+        retro: [
+          {elementType: 'geometry', stylers: [{color: '#ebe3cd'}]},
+          {elementType: 'labels.text.fill', stylers: [{color: '#523735'}]},
+          {elementType: 'labels.text.stroke', stylers: [{color: '#f5f1e6'}]},
+          {
+            featureType: 'administrative',
+            elementType: 'geometry.stroke',
+            stylers: [{color: '#c9b2a6'}]
+          },
+          {
+            featureType: 'administrative.land_parcel',
+            elementType: 'geometry.stroke',
+            stylers: [{color: '#dcd2be'}]
+          },
+          {
+            featureType: 'administrative.land_parcel',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#ae9e90'}]
+          },
+          {
+            featureType: 'landscape.natural',
+            elementType: 'geometry',
+            stylers: [{color: '#dfd2ae'}]
+          },
+          {
+            featureType: 'poi',
+            elementType: 'geometry',
+            stylers: [{color: '#dfd2ae'}]
+          },
+          {
+            featureType: 'poi',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#93817c'}]
+          },
+          {
+            featureType: 'poi.park',
+            elementType: 'geometry.fill',
+            stylers: [{color: '#a5b076'}]
+          },
+          {
+            featureType: 'poi.park',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#447530'}]
+          },
+          {
+            featureType: 'road',
+            elementType: 'geometry',
+            stylers: [{color: '#f5f1e6'}]
+          },
+          {
+            featureType: 'road.arterial',
+            elementType: 'geometry',
+            stylers: [{color: '#fdfcf8'}]
+          },
+          {
+            featureType: 'road.highway',
+            elementType: 'geometry',
+            stylers: [{color: '#f8c967'}]
+          },
+          {
+            featureType: 'road.highway',
+            elementType: 'geometry.stroke',
+            stylers: [{color: '#e9bc62'}]
+          },
+          {
+            featureType: 'road.highway.controlled_access',
+            elementType: 'geometry',
+            stylers: [{color: '#e98d58'}]
+          },
+          {
+            featureType: 'road.highway.controlled_access',
+            elementType: 'geometry.stroke',
+            stylers: [{color: '#db8555'}]
+          },
+          {
+            featureType: 'road.local',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#806b63'}]
+          },
+          {
+            featureType: 'transit.line',
+            elementType: 'geometry',
+            stylers: [{color: '#dfd2ae'}]
+          },
+          {
+            featureType: 'transit.line',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#8f7d77'}]
+          },
+          {
+            featureType: 'transit.line',
+            elementType: 'labels.text.stroke',
+            stylers: [{color: '#ebe3cd'}]
+          },
+          {
+            featureType: 'transit.station',
+            elementType: 'geometry',
+            stylers: [{color: '#dfd2ae'}]
+          },
+          {
+            featureType: 'water',
+            elementType: 'geometry.fill',
+            stylers: [{color: '#b9d3c2'}]
+          },
+          {
+            featureType: 'water',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#92998d'}]
+          }
+        ],
+
+        hiding: [
+          {
+            featureType: 'poi.business',
+            stylers: [{visibility: 'off'}]
+          },
+          {
+            featureType: 'transit',
+            elementType: 'labels.icon',
+            stylers: [{visibility: 'off'}]
+          }
+        ]
+      };
+
+
+})(jQuery);

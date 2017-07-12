@@ -1,1338 +1,482 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<!--
+	Road Trip by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>SINTACS '17</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Sintacs '17 | Sri Sai Ram Institute of Technology | Computer Science and Engineering Symposium</title>
-    <meta name="Author" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Sintacs '17 is the 9th annual symposium conducted by Sri Sai Ram Institute of Technology'">
-    <meta name="keywords" content="Sintacs, Symposium, Sairam, Computer, Science, CSE">
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-3.3.6-min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/jquery.fancybox.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/jquery.fancybox-buttons.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/jquery.fancybox-thumbs.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/google-fonts.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
-</head>
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="#">SINTACS '17</a> </div>
+				<a href="#menu"><span>Menu</span></a>
+			</header>
 
-<body>
-<div id="fixedbg" style="background-image: url('assets/images/venue-information-bg.jpg');"></div>
-<div id="header">
-    <div class="container">
-        <div class="row">
-            <div class="column col-md-2 col-sm-3 col-xs-6">
-                <div class="header-logo-area">
-                    <img src="assets/images/logo_white.png" alt="Site Logo"/>
-                </div>
-            </div>
-            <div class="column col-md-10 col-sm-9 col-xs-6">
-                <div class="header-menu hidden-sm hidden-xs">
-                    <ul>
-                        <li><a href="#showcase" title="HOMEPAGE" class="header-menu-item" id="header-menu-item-1">HOMEPAGE</a></li>
-                        <li><a href="#goldsponsor" title="SPONSORS" class="header-menu-item" id="header-menu-item-2">SPONSORS</a></li>
-                        <li><a href="#calendar" title="CALENDAR" class="header-menu-item" id="header-menu-item-3">CALENDAR</a></li>
-                        <li><a href="#speakers" title="SPEAKERS" class="header-menu-item" id="header-menu-item-4">SPEAKERS</a></li>
-                        <li><a href="#latestnews" title="NEWS" class="header-menu-item" id="header-menu-item-5">NEWS</a></li>
-                        <li><a href="#venueinfo-top" title="VENUE INFORMATION" class="header-menu-item" id="header-menu-item-6">VENUE INFORMATION</a></li>
-                        <li><a href="#contact-top" title="CONTACT" class="header-menu-item" id="header-menu-item-7">CONTACT</a></li>
-                    </ul>
-                </div>
-                <div id="header-menu-area" class="hidden-md hidden-lg">
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                    <a href="javascript:void(0)" title="MENU"></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="hidden-md hidden-lg header-submenu-closed" id="responsive-menu-area">
-    <div id="responsive-menu" class="sub-hidden">
-        <ul>
-            <li><a href="#showcase" title="HOMEPAGE" id="responsive-menu-item-1" class="responsive-menu-item">HOMEPAGE</a></li>
-            <li><a href="#goldsponsor" title="SPONSORS" id="responsive-menu-item-2" class="responsive-menu-item">SPONSORS</a></li>
-            <li><a href="#calendar" title="CALENDAR" id="responsive-menu-item-3" class="responsive-menu-item">CALENDAR</a></li>
-            <li><a href="#speakers" title="SPEAKERS" id="responsive-menu-item-4" class="responsive-menu-item">SPEAKERS</a></li>
-            <li><a href="#latestnews" title="NEWS" id="responsive-menu-item-5" class="responsive-menu-item">NEWS</a></li>
-            <li><a href="#venueinfo-top" title="VENUE INFORMATION" id="responsive-menu-item-6" class="responsive-menu-item">VENUE INFORMATION</a></li>
-            <li><a href="#contact-top" title="CONTACT" id="responsive-menu-item-7" class="responsive-menu-item">CONTACT</a></li>
-        </ul>
-    </div>
-</div>
-<div class="container-fluid" id="showcase">
-    <div class="showcase-item showcase-current" id="showcase-1" style="background-image: url('assets/images/showcase-1.jpg')">
-        <div class="showcase-filter-area"></div>
-        <div class="container">
-            <div class="row">
-                <div class="column col-md-1 col-sm-1 hidden-xs"></div>
-                <div class="column col-md-11 col-sm-11 col-xs-12">
-                    <div class="showcase-city">Sri Sai Ram Institute of Technology</div>
-                    <img src="assets/images/gotsintacs.png" alt="Site Logo" height="500px" style="position: relative; top: -190px; left: -150px;"/>
-                    <div class="showcase-place"></div>
-                    <div class="showcase-detail"><a href="https://en.wikipedia.org/wiki/Westminster_Abbey" title="DETAIL" target="_blank">DETAIL</a></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="showcase-item showcase-right" id="showcase-2" style="background-image: url('assets/images/showcase-2.jpg')">
-        <div class="showcase-filter-area"></div>
-        <div class="container">
-            <div class="row">
-                <div class="column col-md-1 col-sm-1 hidden-xs"></div>
-                <div class="column col-md-11 col-sm-11 col-xs-12">
-                    <div class="showcase-city">London</div>
-                    <div class="showcase-place">TOWER<br>BRIDGE</div>
-                    <div class="showcase-detail"><a href="https://en.wikipedia.org/wiki/Tower_Bridge" title="DETAIL" target="_blank">DETAIL</a></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="showcase-item showcase-right" id="showcase-3" style="background-image: url('assets/images/showcase-3.jpg')">
-        <div class="showcase-filter-area"></div>
-        <div class="container">
-            <div class="row">
-                <div class="column col-md-1 col-sm-1 hidden-xs"></div>
-                <div class="column col-md-11 col-sm-11 col-xs-12">
-                    <div class="showcase-city">London</div>
-                    <div class="showcase-place">BIG<br>BEN</div>
-                    <div class="showcase-detail"><a href="https://en.wikipedia.org/wiki/Big_Ben" title="DETAIL" target="_blank">DETAIL</a></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="showcase-item showcase-right" id="showcase-4" style="background-image: url('assets/images/showcase-4.jpg')">
-        <div class="showcase-filter-area"></div>
-        <div class="container">
-            <div class="row">
-                <div class="column col-md-1 col-sm-1 hidden-xs"></div>
-                <div class="column col-md-11 col-sm-11 col-xs-12">
-                    <div class="showcase-city">London</div>
-                    <div class="showcase-place">BUCKINGHAM<br>PALACE</div>
-                    <div class="showcase-detail"><a href="https://en.wikipedia.org/wiki/Buckingham_Palace" title="DETAIL" target="_blank">DETAIL</a></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="column col-md-12">
-                <div class="showcase-save">
-                    <img src="assets/images/savethedate.svg" alt="Save The Date" />
-                    <div class="showcase-save-left">
-                        <div id="savethedate-year">9<sup><small>TH</small></sup></div>
-                        <div id="savethedate-buy"><a href="javascript:void(0)" title="BUY TICKET">AUGUST</a></div>
-                    </div>
-                    <div class="showcase-save-right">
-                        <div id="savethedate-day"></div>
-                        <div id="savethedate-month">CSE</div>
-                        <div id="savethedate-save">save</div>
-                        <div id="savethedate-thedate"><span>the</span>date</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-   <div class="showcase-left-arrow hidden-xs" id="showcaseleftarrow">
-        <a href="javascript:void(0)" title="Showcase Previous"><img src="assets/images/showcase-arrow-left.png" alt="Arrow Left"/></a>
-    </div>
-    <div class="showcase-right-arrow hidden-xs" id="showcaserightarrow">
-        <a href="javascript:void(0)" title="Showcase Next"><img src="assets/images/showcase-arrow-right.png" alt="Arrow Right"/></a>
-    </div>
-    <div class="showcase-pagination">
-        <div class="showcase-pagination-circle"><a href="javascript:void(0)" title="Showcase 1" id="showcase-pagination-1" class="showcase-pagination-circle-item pagination-show"></a></div>
-        <div class="showcase-pagination-circle"><a href="javascript:void(0)" title="Showcase 2" id="showcase-pagination-2" class="showcase-pagination-circle-item"></a></div>
-        <div class="showcase-pagination-circle"><a href="javascript:void(0)" title="Showcase 3" id="showcase-pagination-3" class="showcase-pagination-circle-item"></a></div>
-        <div class="showcase-pagination-circle"><a href="javascript:void(0)" title="Showcase 4" id="showcase-pagination-4" class="showcase-pagination-circle-item"></a></div>
-    </div>
-</div>
-<div class="container-fluid" id="timetoevent">
-    <div class="container">
-        <div class="row">
-            <div class="column col-md-1 hidden-xs hidden-xs"></div>
-            <div class="column col-md-11 col-sm-12 col-xs-12">
-                <div class="timetoevent-header-area">
-                    <i class="fa fa-clock-o" aria-hidden="true"></i>
-                    <h2>TIME TO EVENT</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="column col-md-1 hidden-sm hidden-xs timetoevent-column"></div>
-            <div class="column col-md-1 col-sm-5 col-xs-12 timetoevent-column">
-                <div class="timetoevent-amount" id="tte-month">&nbsp;</div>
-                <div class="timetoevent-timespan">Weeks</div>
-            </div>
-            <div class="column col-md-2 col-sm-2 hidden-xs timetoevent-column"><div class="timetoevent-slash">/</div></div>
-            <div class="column col-md-1 col-sm-5 col-xs-12 timetoevent-column"><div class="timetoevent-amount" id="tte-day">&nbsp;</div><div class="timetoevent-timespan">Day</div></div>
-            <div class="column col-md-2 hidden-sm hidden-xs timetoevent-column"><div class="timetoevent-slash">/</div></div>
-            <div class="column col-md-1 col-sm-5 col-xs-12 timetoevent-column"><div class="timetoevent-amount" id="tte-hour">&nbsp;</div><div class="timetoevent-timespan">Hour</div></div>
-            <div class="column col-md-2 col-sm-2 hidden-xs timetoevent-column"><div class="timetoevent-slash">/</div></div>
-            <div class="column col-md-1 col-sm-5 col-xs-12 timetoevent-column"><div class="timetoevent-amount" id="tte-minute">&nbsp;</div><div class="timetoevent-timespan">Minute</div></div>
-            <div class="column col-md-1 hidden-sm hidden-xs timetoevent-column"></div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid" id="aboutevent">
-    <div class="container">
-        <div class="row">
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-            <div class="column col-md-10 col-sm-12 col-xs-12">
-                <div class="becomesponsor-header">
-                    <i class="fa fa-book" aria-hidden="true"></i>
-                    <h2>ABOUT EVENT</h2>
-                </div>
-                    <div class="becomesponsor-writing">
-                        <p>Join Our Event</p>
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="#">Home</a></li>
+					<li><a href="#four">About</a></li>
+					<li><a href="#one">Events</a></li>
+					<li><a href="#three">Internships</a></li>
+					<li><a href="#maps">Maps</a></li>
+					<li><a href="#footer">Registration</a></li>
+				</ul>
+			</nav>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam molestie molestie tristique. Nunc luctus laoreet tortor luctus condimentum. Donec vitae efficitur est, non tempor velit. Nam vel tellus rutrum, vestibulum velit imperdiet, sagittis tortor. Integer ultrices finibus eros at vulputate. Mauris fringilla, nibh sit amet blandit scelerisque, sapien felis lacinia metus, tincidunt varius tellus justo in nunc.</p>
-                        <p>Vestibulum nec interdum neque, ac gravida elit. Suspendisse mollis, eros in sollicitudin cursus, libero libero interdum metus, ut pharetra justo libero id dui. Etiam finibus tempus justo sit amet cursus. Quisque dapibus fringilla neque, sit amet bibendum magna condimentum ac. Integer molestie commodo scelerisque. Fusce placerat semper nibh vel vestibulum. Maecenas semper scelerisque nisi, in pretium erat lacinia id.</p>
-                    </div>
-            </div>
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid sponsorcontainer" id="goldsponsor">
-    <div class="container">
-        <div class="row">
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-            <div class="column col-md-10 col-sm-12 col-xs-12">
-                <div class="goldsponsor-header-left">
-                    <div class="goldsponsor-header-1">GOLD</div>
-                    <div class="goldsponsor-header-2">Sponsor</div>
-                </div>
-            </div>
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-        </div>
-        <div class="row">
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-            <div class="column col-md-10 col-sm-12 col-xs-12">
-                <div class="goldsponsor-showarea">
-                    <div class="row">
-                        <div class="column col-md-2 col-sm-4 col-xs-6">
-                            <div class="goldsponsor-show">
-                                <a href="#" title="Sintacs" target="_blank">
-                                    <img src="assets/images/sintacs.png" alt="Envato Logo"/>
-                                    <div class="link-visited">
-                                        <i class="fa fa-link" aria-hidden="true"></i><br>VISIT
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="column col-md-2 col-sm-4 col-xs-6">
-                            <div class="goldsponsor-show">
-                                <a href="#" title="Sintacs" target="_blank">
-                                    <img src="assets/images/sintacs.png" alt="Envato Logo"/>
-                                    <div class="link-visited">
-                                        <i class="fa fa-link" aria-hidden="true"></i><br>VISIT
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="column col-md-2 col-sm-4 col-xs-6">
-                            <div class="goldsponsor-show">
-                                <a href="#" title="Sintacs" target="_blank">
-                                    <img src="assets/images/sintacs.png" alt="Envato Logo"/>
-                                    <div class="link-visited">
-                                        <i class="fa fa-link" aria-hidden="true"></i><br>VISIT
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="column col-md-2 col-sm-4 col-xs-6">
-                            <div class="goldsponsor-show">
-                                <a href="#" title="Sintacs" target="_blank">
-                                    <img src="assets/images/sintacs.png" alt="Envato Logo"/>
-                                    <div class="link-visited">
-                                        <i class="fa fa-link" aria-hidden="true"></i><br>VISIT
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="column col-md-2 col-sm-4 col-xs-6">
-                            <div class="goldsponsor-show">
-                                <a href="#" title="Sintacs" target="_blank">
-                                    <img src="assets/images/sintacs.png" alt="Envato Logo"/>
-                                    <div class="link-visited">
-                                        <i class="fa fa-link" aria-hidden="true"></i><br>VISIT
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="column col-md-2 col-sm-4 col-xs-6">
-                            <div class="goldsponsor-show">
-                                <a href="#" title="Sintacs" target="_blank">
-                                    <img src="assets/images/sintacs.png" alt="Envato Logo"/>
-                                    <div class="link-visited">
-                                        <i class="fa fa-link" aria-hidden="true"></i><br>VISIT
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid sponsorcontainer" id="silversponsor">
-    <div class="container">
-        <div class="row">
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-            <div class="column col-md-10 col-sm-12 col-xs-12">
-                <div class="goldsponsor-header-left">
-                    <div class="goldsponsor-header-1">SILVER</div>
-                    <div class="goldsponsor-header-2">Sponsor</div>
-                </div>
-            </div>
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-        </div>
-        <div class="row">
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-            <div class="column col-md-10 col-sm-12 col-xs-12">
-                <div class="goldsponsor-showarea">
-                    <div class="row">
-                        <div class="column col-md-2 col-sm-4 col-xs-6">
-                            <div class="goldsponsor-show">
-                                <a href="#" title="Sintacs" target="_blank">
-                                    <img src="assets/images/sintacs.png" alt="Envato Logo"/>
-                                    <div class="link-visited">
-                                        <i class="fa fa-link" aria-hidden="true"></i><br>VISIT
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="column col-md-2 col-sm-4 col-xs-6">
-                            <div class="goldsponsor-show">
-                                <a href="#" title="Sintacs" target="_blank">
-                                    <img src="assets/images/sintacs.png" alt="Envato Logo"/>
-                                    <div class="link-visited">
-                                        <i class="fa fa-link" aria-hidden="true"></i><br>VISIT
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="column col-md-2 col-sm-4 col-xs-6">
-                            <div class="goldsponsor-show">
-                                <a href="#" title="Sintacs" target="_blank">
-                                    <img src="assets/images/sintacs.png" alt="Envato Logo"/>
-                                    <div class="link-visited">
-                                        <i class="fa fa-link" aria-hidden="true"></i><br>VISIT
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="column col-md-2 col-sm-4 col-xs-6">
-                            <div class="goldsponsor-show">
-                                <a href="#" title="Sintacs" target="_blank">
-                                    <img src="assets/images/sintacs.png" alt="Envato Logo"/>
-                                    <div class="link-visited">
-                                        <i class="fa fa-link" aria-hidden="true"></i><br>VISIT
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="column col-md-2 col-sm-4 col-xs-6">
-                            <div class="goldsponsor-show">
-                                <a href="#" title="Sintacs" target="_blank">
-                                    <img src="assets/images/sintacs.png" alt="Envato Logo"/>
-                                    <div class="link-visited">
-                                        <i class="fa fa-link" aria-hidden="true"></i><br>VISIT
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="column col-md-2 col-sm-4 col-xs-6">
-                            <div class="goldsponsor-show">
-                                <a href="#" title="Sintacs" target="_blank">
-                                    <img src="assets/images/sintacs.png" alt="Envato Logo"/>
-                                    <div class="link-visited">
-                                        <i class="fa fa-link" aria-hidden="true"></i><br>VISIT
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid sponsorcontainer" id="bronzesponsor">
-    <div class="container">
-        <div class="row">
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-            <div class="column col-md-10 col-sm-12 col-xs-12">
-                <div class="goldsponsor-header-left">
-                    <div class="goldsponsor-header-1">BRONZE</div>
-                    <div class="goldsponsor-header-2">Sponsor</div>
-                </div>
-            </div>
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-        </div>
-        <div class="row">
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-            <div class="column col-md-10 col-sm-12 col-xs-12">
-                <div class="goldsponsor-showarea">
-                    <div class="row">
-                        <div class="column col-md-2 col-sm-4 col-xs-6">
-                            <div class="goldsponsor-show">
-                                <a href="#" title="Sintacs" target="_blank">
-                                    <img src="assets/images/sintacs.png" alt="Envato Logo"/>
-                                    <div class="link-visited">
-                                        <i class="fa fa-link" aria-hidden="true"></i><br>VISIT
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="column col-md-2 col-sm-4 col-xs-6">
-                            <div class="goldsponsor-show">
-                                <a href="#" title="Sintacs" target="_blank">
-                                    <img src="assets/images/sintacs.png" alt="Envato Logo"/>
-                                    <div class="link-visited">
-                                        <i class="fa fa-link" aria-hidden="true"></i><br>VISIT
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="column col-md-2 col-sm-4 col-xs-6">
-                            <div class="goldsponsor-show">
-                                <a href="#" title="Sintacs" target="_blank">
-                                    <img src="assets/images/sintacs.png" alt="Envato Logo"/>
-                                    <div class="link-visited">
-                                        <i class="fa fa-link" aria-hidden="true"></i><br>VISIT
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="column col-md-2 col-sm-4 col-xs-6">
-                            <div class="goldsponsor-show">
-                                <a href="#" title="Sintacs" target="_blank">
-                                    <img src="assets/images/sintacs.png" alt="Envato Logo"/>
-                                    <div class="link-visited">
-                                        <i class="fa fa-link" aria-hidden="true"></i><br>VISIT
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="column col-md-2 col-sm-4 col-xs-6">
-                            <div class="goldsponsor-show">
-                                <a href="#" title="Sintacs" target="_blank">
-                                    <img src="assets/images/sintacs.png" alt="Envato Logo"/>
-                                    <div class="link-visited">
-                                        <i class="fa fa-link" aria-hidden="true"></i><br>VISIT
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="column col-md-2 col-sm-4 col-xs-6">
-                            <div class="goldsponsor-show">
-                                <a href="#" title="Sintacs" target="_blank">
-                                    <img src="assets/images/sintacs.png" alt="Envato Logo"/>
-                                    <div class="link-visited">
-                                        <i class="fa fa-link" aria-hidden="true"></i><br>VISIT
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid sponsorcontainer" id="promotionsponsor">
-    <div class="container">
-        <div class="row">
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-            <div class="column col-md-10 col-sm-12 col-xs-12">
-                <div class="goldsponsor-header-left">
-                    <div class="goldsponsor-header-1">PROMOTION</div>
-                    <div class="goldsponsor-header-2">Sponsor</div>
-                </div>
-            </div>
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-        </div>
-        <div class="row">
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-            <div class="column col-md-10 col-sm-12 col-xs-12">
-                <div class="goldsponsor-showarea">
-                    <div class="row">
-                        <div class="column col-md-2 col-sm-4 col-xs-6">
-                            <div class="goldsponsor-show">
-                                <a href="#" title="Sintacs" target="_blank">
-                                    <img src="assets/images/sintacs.png" alt="Envato Logo"/>
-                                    <div class="link-visited">
-                                        <i class="fa fa-link" aria-hidden="true"></i><br>VISIT
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="column col-md-2 col-sm-4 col-xs-6">
-                            <div class="goldsponsor-show">
-                                <a href="#" title="Sintacs" target="_blank">
-                                    <img src="assets/images/sintacs.png" alt="Envato Logo"/>
-                                    <div class="link-visited">
-                                        <i class="fa fa-link" aria-hidden="true"></i><br>VISIT
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="column col-md-2 col-sm-4 col-xs-6">
-                            <div class="goldsponsor-show">
-                                <a href="#" title="Sintacs" target="_blank">
-                                    <img src="assets/images/sintacs.png" alt="Envato Logo"/>
-                                    <div class="link-visited">
-                                        <i class="fa fa-link" aria-hidden="true"></i><br>VISIT
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="column col-md-2 col-sm-4 col-xs-6">
-                            <div class="goldsponsor-show">
-                                <a href="#" title="Sintacs" target="_blank">
-                                    <img src="assets/images/sintacs.png" alt="Envato Logo"/>
-                                    <div class="link-visited">
-                                        <i class="fa fa-link" aria-hidden="true"></i><br>VISIT
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="column col-md-2 col-sm-4 col-xs-6">
-                            <div class="goldsponsor-show">
-                                <a href="#" title="Sintacs" target="_blank">
-                                    <img src="assets/images/sintacs.png" alt="Envato Logo"/>
-                                    <div class="link-visited">
-                                        <i class="fa fa-link" aria-hidden="true"></i><br>VISIT
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="column col-md-2 col-sm-4 col-xs-6">
-                            <div class="goldsponsor-show">
-                                <a href="#" title="Sintacs" target="_blank">
-                                    <img src="assets/images/sintacs.png" alt="Envato Logo"/>
-                                    <div class="link-visited">
-                                        <i class="fa fa-link" aria-hidden="true"></i><br>VISIT
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid" id="becomesponsor">
-    <div class="container">
-        <div class="row">
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-            <div class="column col-md-10 col-sm-12 col-xs-12">
-                <div class="becomesponsor-header">
-                    <i class="fa fa-briefcase" aria-hidden="true"></i>
-                    <h2>BECOME SPONSOR</h2>
-                </div>
-                    <div class="becomesponsor-writing">
-                        <p>Your Support Makes us Stronger!</p>
+		<!-- Banner -->
+		<!--
+			Note: To show a background image, set the "data-bg" attribute below
+			to the full filename of your image. This is used in each section to set
+			the background image.
+		-->
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam molestie molestie tristique. Nunc luctus laoreet tortor luctus condimentum. Donec vitae efficitur est, non tempor velit. Nam vel tellus rutrum, vestibulum velit imperdiet, sagittis tortor. Integer ultrices finibus eros at vulputate. Mauris fringilla, nibh sit amet blandit scelerisque, sapien felis lacinia metus, tincidunt varius tellus justo in nunc. Vestibulum nec interdum neque, ac gravida elit. Suspendisse mollis, eros in sollicitudin cursus, libero libero interdum metus, ut pharetra justo libero id dui. Etiam finibus tempus justo sit amet cursus. Quisque dapibus fringilla neque, sit amet bibendum magna condimentum ac. Integer molestie commodo scelerisque. Fusce placerat semper nibh vel vestibulum. Maecenas semper scelerisque nisi, in pretium erat lacinia id.</p>
 
-                        <p>Sed molestie, magna quis venenatis fringilla, nisi urna pulvinar neque, vitae pharetra magna quam eget metus. Nunc consequat volutpat efficitur. Cras egestas eget dolor non posuere. Aliquam feugiat magna sit amet mi aliquet bibendum. Mauris malesuada metus et sapien convallis molestie. Pellentesque eleifend nisl at sem fermentum euismod. Proin volutpat enim nec odio porttitor semper. Vivamus scelerisque lacinia diam, mollis lacinia elit luctus nec. Phasellus facilisis rhoncus condimentum. Vestibulum et tempor augue. Morbi in odio urna. Aliquam erat volutpat. Fusce vel vehicula quam, sed auctor urna. Duis porta porta nibh, nec lacinia libero molestie pellentesque.</p>
-                    </div>
-            </div>
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-        </div>
-        <div class="row">
-            <div class="column col-md-3 col-sm-6 col-xs-12">
-                <div class="becomesponsor-box">
-                    <a id="various1" href="javascript:void(0)" title="GOLD SPONSOR">
-                    <div class="becomesponsor-header-1">GOLD</div>
-                    <div class="becomesponsor-header-2">SPONSOR</div>
-                    <div class="becomesponsor-link">Learn More<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                    </a>
-                </div>
-            </div>
-            <div class="column col-md-3 col-sm-6 col-xs-12">
-                <div class="becomesponsor-box">
-                    <a id="various2" href="javascript:void(0)" title="SILVER SPONSOR">
-                    <div class="becomesponsor-header-1">SILVER</div>
-                    <div class="becomesponsor-header-2">SPONSOR</div>
-                    <div class="becomesponsor-link">Learn More<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                    </a>
-                </div>
-            </div>
-            <div class="column col-md-3 col-sm-6 col-xs-12">
-                <div class="becomesponsor-box">
-                    <a id="various3" href="javascript:void(0)" title="BRONZE SPONSOR">
-                    <div class="becomesponsor-header-1">BRONZE</div>
-                    <div class="becomesponsor-header-2">SPONSOR</div>
-                    <div class="becomesponsor-link">Learn More<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                    </a>
-                </div>
-            </div>
-            <div class="column col-md-3 col-sm-6 col-xs-12">
-                <div class="becomesponsor-box">
-                    <a id="various4" href="javascript:void(0)" title="PROMOTION SPONSOR">
-                    <div class="becomesponsor-header-1">PROMOTION</div>
-                    <div class="becomesponsor-header-2">SPONSOR</div>
-                    <div class="becomesponsor-link">Learn More<i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid" id="becomesponsor-bg-box-area">
-   <div class="container">
-        <div class="row">
-            <div class="column col-md-12 col-sm-12 col-xs-12">
-                <div class="becomesponsor-close">
-                    <div class="home-inner-box-writing-area-close">
-                        <a href="javascript:void(0)" title="CLOSE" id="home-inner-box-writing-area-close-button"></a>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-       <div class="row">
-           <div class="column col-md-8 col-sm-12 col-xs-12">
-               <div class="becomesponsor-bg-box-area-inner">
-                    <div class="becomesponsor-bg-box-area-item" id="becomesponsor-item-1">
-                        <div class="becomesponsor-bg-box-area-item-writing">
-                            Sponsor Contribution &euro; 15.000 + VAT<br>
-                            The following amenities will be provided to each Gold Sponsor:<br>
-                            <ul>
-                            <li>20 invitations to the dinner.</li>
-                            <li>Its logo will be printed on visual materials, handouts and leaflets.</li>
-                            <li>Its logo and a link to its website will be inserted in the CAG EVENT 2017 website.</li>
-                            <li>A plaque will be presented to each Gold Sponsor.</li>
-                            <li>There will be only twenty-five (5) Gold Sponsors.</li>
-                            </ul>
+		<!--Modals-->
+
+		<!-- Valar Codulus Modal -->
+		<div id="valarModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">VALAR CODULUS</h4>
+			</div>
+			<div class="modal-body">
+				<div class="content">Rules: <br>
+					1. It is an Individual Event. <br>
+					2. Both Prelims & Finals will be conducted OnSite. <br>
+					3. The contestants have the liberty to code in any language of their choice.
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success modal-btn" data-dismiss="modal">Close</button>
+			</div>
+			</div>
+
+		</div>
+		</div>
+
+		<!-- Walder Web Modal -->
+		<div id="webModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">WALDER WEB</h4>
+			</div>
+			<div class="modal-body">
+				<div class="content">
+					Rules: <br>
+					1. Members per Team: 2 <br>
+					2. Both Prelims & Finals will be conducted OnSite. <br>
+					3. A Special Round will be conducted for an Internship.
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success modal-btn" data-dismiss="modal">Close</button>
+			</div>
+			</div>
+
+		</div>
+		</div>
+
+		<!-- Bug Slayer Modal -->
+		<div id="bugModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">BUG SLAYER</h4>
+			</div>
+			<div class="modal-body">
+				<div class="content">
+						Rules: <br>
+						1. Members per Team: 2 <br>
+						2. Prelims - MCQs, Final Round - debugging <br>
+						3. Languages to be used - C / C++
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success modal-btn" data-dismiss="modal">Close</button>
+			</div>
+			</div>
+
+		</div>
+		</div>
+
+		<!-- Maesters Master Modal -->
+		<div id="masterModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">MAESTERS MASTER</h4>
+			</div>
+			<div class="modal-body">
+				<div class="content">
+					Rules: <br>
+					1. Members per Team: 2 <br>
+					2. Paper Abstract Submission DeadLine: 05-08-2017 <br><br>
+					Topics: <br>
+					1. Internet of Things <br>
+					2. Data Analytics <br>
+					3. Cyber Crime & Security <br>
+					4. Grid & Cloud Computing  <br>
+					5. Augmented Reality / Virtual Reality  <br>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success modal-btn" data-dismiss="modal">Close</button>
+			</div>
+			</div>
+
+		</div>
+		</div>
+
+		<!-- Three Eyed Raven Modal -->
+		<div id="threeModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">THREE EYED RAVEN</h4>
+			</div>
+			<div class="modal-body">
+				<div class="content">
+					Rules: <br>
+					1. Members per Team: 2 <br>
+					2. Both Prelims & Finals will be conducted OnSite. 
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success modal-btn" data-dismiss="modal">Close</button>
+			</div>
+			</div>
+
+		</div>
+		</div>
+
+
+
+
+
+			<section id="banner" class="bg-img" data-bg="banner3.jpg">
+				<div class="inner">
+					<div class="container-fluid">
+					   <div class="col-md-2 col-sm-10">
+                        <div class="block">
+                          <div id="logo"></div>
                         </div>
-                    </div>
-                    <div class="becomesponsor-bg-box-area-item" id="becomesponsor-item-2">
-                        <div class="becomesponsor-bg-box-area-item-writing">
-                            Sponsor Contribution &euro; 10.000 + VAT<br>
-                            The following amenities will be provided to each Silver Sponsor:<br>
-                            <ul>
-                            <li>15 invitations to the dinner.</li>
-                            <li>Its logo and a link to its website will be inserted in the CAG EVENT 2017 website.</li>
-                            <li>A plaque will be presented to each Silver Sponsor.</li>
-                            <li>There will be only twenty-five (10) Silver Sponsors.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="becomesponsor-bg-box-area-item" id="becomesponsor-item-3">
-                        <div class="becomesponsor-bg-box-area-item-writing">
-                            Sponsor Contribution &euro; 5.000 + VAT<br>
-                            The following amenities will be provided to each Bronze Sponsor:<br>
-                            <ul>
-                            <li>6 invitations to the dinner.</li>
-                            <li>Its logo and a link to its website will be inserted in the CAG EVENT 2017 website.</li>
-                            <li>A plaque will be presented to each Bronze Sponsor.</li>
-                            <li>There will be only twenty-five (25) Bronze Sponsors.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="becomesponsor-bg-box-area-item" id="becomesponsor-item-4">
-                        <div class="becomesponsor-bg-box-area-item-writing">
-                            Sponsor Contribution &euro; 2.000 + VAT<br>
-                            The following amenities will be provided to each Promotion Sponsor:<br>
-                            <ul>
-                            <li>2 invitation to the dinner.</li>
-                            <li>Its logo and a link to its website will be inserted in the CAG EVENT 2017 website.</li>
-                            </ul>
-                        </div>
-                    </div>
-               </div>
-           </div>
-           <div class="column col-md-4 col-sm-12 col-xs-12">
-               <div class="becomesponsor-bg-box-area-menu">
-                   <ul>
-                       <li><a href="javascript:void(0)" title="GOLD SPONSOR" class="becomesponsor-bg-box-area-menu-item" id="bbbami-1">GOLD SPONSORSHIP</a></li>
-                       <li><a href="javascript:void(0)" title="SILVER SPONSOR" class="becomesponsor-bg-box-area-menu-item" id="bbbami-2">SILVER SPONSORSHIP</a></li>
-                       <li><a href="javascript:void(0)" title="BRONZE SPONSOR" class="becomesponsor-bg-box-area-menu-item" id="bbbami-3">BRONZE SPONSORSHIP</a></li>
-                       <li><a href="javascript:void(0)" title="PROMOTION SPONSOR" class="becomesponsor-bg-box-area-menu-item" id="bbbami-4">PROMOTION SPONSORSHIP</a></li>
-                   </ul>
-               </div>
-           </div>
-       </div>
-   </div>
-</div>
-<div class="container-fluid" id="speakers">
-    <div class="container">
-        <div class="row">
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-            <div class="column col-md-10 col-sm-12 col-xs-12">
-                <div class="speakers-header">
-                    <i class="fa fa-microphone" aria-hidden="true"></i>
-                    <h2>SPEAKERS</h2>
-                </div>
-            </div>
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-        </div>
-    </div>
-    <div class="page-icon-animation" id="page-icon-1">
-        <div class="page-icon-area speakers-icon">
-            <i class="fa fa-microphone" aria-hidden="true"></i>
-        </div>
-    </div>
-</div>
-<div class="container-fluid" id="home-speakers">
-    <div class="container">
-        <div class="row">
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-            <div class="column col-md-10 col-sm-12 col-xs-12">
-                <div class="row">
-                    <div class="column col-md-4 col-sm-6 col-xs-12">
-                        <div class="speakers-bg-area" style="background-image: url('assets/images/speaker-1.png')" id="speaker-link-1">
-                            <div class="speaker-social-area hidden-sm hidden-xs">
-                                <ul>
-                                    <li><a href="javascript:void(0)" target="_blank" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="speaker-job-area">R&amp;D Specialist</div>
-                        <div class="speaker-name-area">JOHN DOE</div>
-                        <div class="speaker-social-area-responsive hidden-md hidden-lg">
-                                <ul>
-                                    <li><a href="javascript:void(0)" target="_blank" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                </ul>
-                        </div>
-                    </div>
-                    <div class="column col-md-4 col-sm-6 col-xs-12">
-                        <div class="speakers-bg-area" style="background-image: url('assets/images/speaker-2.png')" id="speaker-link-2">
-                            <div class="speaker-social-area hidden-sm hidden-xs">
-                                <ul>
-                                    <li><a href="javascript:void(0)" target="_blank" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="speaker-job-area">R&amp;D Specialist</div>
-                        <div class="speaker-name-area">JOHN DOE</div>
-                        <div class="speaker-social-area-responsive hidden-md hidden-lg">
-                                <ul>
-                                    <li><a href="javascript:void(0)" target="_blank" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                </ul>
-                        </div>
-                    </div>
-                    <div class="column col-md-4 col-sm-6 col-xs-12">
-                        <div class="speakers-bg-area" style="background-image: url('assets/images/speaker-3.png')" id="speaker-link-3">
-                            <div class="speaker-social-area hidden-sm hidden-xs">
-                                <ul>
-                                    <li><a href="javascript:void(0)" target="_blank" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="speaker-job-area">R&amp;D Specialist</div>
-                        <div class="speaker-name-area">JANE DOE</div>
-                        <div class="speaker-social-area-responsive hidden-md hidden-lg">
-                                <ul>
-                                    <li><a href="javascript:void(0)" target="_blank" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                </ul>
-                        </div>
-                    </div>
-                    <div class="column col-md-4 col-sm-6 col-xs-12">
-                        <div class="speakers-bg-area" style="background-image: url('assets/images/speaker-4.png')" id="speaker-link-4">
-                            <div class="speaker-social-area hidden-sm hidden-xs">
-                                <ul>
-                                    <li><a href="javascript:void(0)" target="_blank" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="speaker-job-area">R&amp;D Specialist</div>
-                        <div class="speaker-name-area">JANE DOE</div>
-                        <div class="speaker-social-area-responsive hidden-md hidden-lg">
-                                <ul>
-                                    <li><a href="javascript:void(0)" target="_blank" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                </ul>
-                        </div>
-                    </div>
-                    <div class="column col-md-4 col-sm-6 col-xs-12">
-                        <div class="speakers-bg-area" style="background-image: url('assets/images/speaker-5.png')" id="speaker-link-5">
-                            <div class="speaker-social-area hidden-sm hidden-xs">
-                                <ul>
-                                    <li><a href="javascript:void(0)" target="_blank" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="speaker-job-area">R&amp;D Specialist</div>
-                        <div class="speaker-name-area">JOHN DOE</div>
-                        <div class="speaker-social-area-responsive hidden-md hidden-lg">
-                                <ul>
-                                    <li><a href="javascript:void(0)" target="_blank" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                </ul>
-                        </div>
-                    </div>
-                    <div class="column col-md-4 col-sm-6 col-xs-12">
-                        <div class="speakers-bg-area" style="background-image: url('assets/images/speaker-6.png')" id="speaker-link-6">
-                            <div class="speaker-social-area hidden-sm hidden-xs">
-                                <ul>
-                                    <li><a href="javascript:void(0)" target="_blank" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="speaker-job-area">R&amp;D Specialist</div>
-                        <div class="speaker-name-area">JANE DOE</div>
-                        <div class="speaker-social-area-responsive hidden-md hidden-lg">
-                                <ul>
-                                    <li><a href="javascript:void(0)" target="_blank" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                    <li><a href="javascript:void(0)" target="_blank" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid" id="calendar">
-    <div class="container">
-        <div class="row">
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-            <div class="column col-md-10 col-sm-12 col-xs-12">
-                <div class="calendar-header">
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                    <h2>CALENDAR</h2>
-                </div>
-            </div>
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-        </div>
-    </div>
-    <div class="page-icon-animation" id="page-icon-2">
-        <div class="page-icon-area calendar-icon">
-            <i class="fa fa-calendar" aria-hidden="true"></i>
-        </div>
-    </div>
-</div>
-<div class="container-fluid" id="home-calendar">
-    <div class="container">
-        <div class="row">
-            <div class="column col-md-2 col-sm-6 col-xs-6">
-                <div class="calendar-left-arrow"><a href="javascript:void(0)" title="Prev" id="calendar-arrow-left"><i class="fa fa-chevron-left" aria-hidden="true"></i></a></div>
-            </div>
-            <div class="column hidden-md hidden-lg col-sm-6 col-xs-6">
-                <div class="calendar-right-arrow"><a href="javascript:void(0)" title="Next" id="calendar-arrow-right2"><i class="fa fa-chevron-right" aria-hidden="true"></i></a></div>
-            </div>
-            <div class="column col-md-8 col-sm-12 col-xs-12">
-                <div id="calendar-show-area">
-                    <div class="calendar-show-item calendar-show-current" id="calendar-show-item-1">
-                        <div class="calendar-day">DAY 1<span>31st DECEMBER</span></div>
-                        <div class="calendar-event-box">
-                            <div class="row">
-                                <div class="column col-md-8 col-sm-8 col-xs-12">
-                                    <div class="calendar-time">10.00</div>
-                                    <div class="calendar-event">Opening Ceremonies</div>
-                                    <div class="calendar-place">Conference Hall 1</div>
-                                    <div class="calendar-event-speaker-name">by <span>JOHN DOE</span></div>
-                                </div>
-                                <div class="column col-md-4 col-sm-4 col-xs-12">
-                                    <div class="calendar-speaker-picture-area">
-                                        <div class="calendar-event-speaker-picture" style="background-image: url('assets/images/speaker-1.png')"></div>
-                                        <a href="#speaker-link-1" title="GO TO SPEAKER"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="calendar-event-box">
-                            <div class="row">
-                                <div class="column col-md-8 col-sm-8 col-xs-12">
-                                    <div class="calendar-time">12.00</div>
-                                    <div class="calendar-event">Studio Work</div>
-                                    <div class="calendar-place">Conference Hall 1</div>
-                                    <div class="calendar-event-speaker-name">by <span>JOHN DOE</span></div>
-                                </div>
-                                <div class="column col-md-4 col-sm-4 col-xs-12">
-                                    <div class="calendar-speaker-picture-area">
-                                        <div class="calendar-event-speaker-picture" style="background-image: url('assets/images/speaker-2.png')"></div>
-                                        <a href="#speaker-link-1" title="GO TO SPEAKER"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="calendar-event-box">
-                            <div class="row">
-                                <div class="column col-md-8 col-sm-8 col-xs-12">
-                                    <div class="calendar-time">15.00</div>
-                                    <div class="calendar-event">Coctail</div>
-                                    <div class="calendar-place">Main Hall</div>
-                                    <div class="calendar-event-speaker-name">by <span>GOLDEN SPONSOR</span></div>
-                                </div>
-                                <div class="column col-md-4 col-sm-4 col-xs-12">
-                                    <div class="calendar-speaker-picture-area">
-                                        <div class="calendar-event-icon">
-                                            <i class="fa fa-glass" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="calendar-event-box">
-                            <div class="row">
-                                <div class="column col-md-8 col-sm-8 col-xs-12">
-                                    <div class="calendar-time">20.00</div>
-                                    <div class="calendar-event">Dinner</div>
-                                    <div class="calendar-place">Dining Hall</div>
-                                    <div class="calendar-event-speaker-name">by <span>GOLDEN SPONSOR</span></div>
-                                </div>
-                                <div class="column col-md-4 col-sm-4 col-xs-12">
-                                    <div class="calendar-speaker-picture-area">
-                                        <div class="calendar-event-icon">
-                                            <i class="fa fa-cutlery" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="calendar-show-item calendar-show-right" id="calendar-show-item-2">
-                        <div class="calendar-day">DAY 2<span>1st JANUARY</span></div>
-                        <div class="calendar-event-box">
-                            <div class="row">
-                                <div class="column col-md-8 col-sm-8 col-xs-12">
-                                    <div class="calendar-time">9.00</div>
-                                    <div class="calendar-event">Opening Ceremonies</div>
-                                    <div class="calendar-place">Conference Hall 1</div>
-                                    <div class="calendar-event-speaker-name">by <span>JOHN DOE</span></div>
-                                </div>
-                                <div class="column col-md-4 col-sm-4 col-xs-12">
-                                    <div class="calendar-speaker-picture-area">
-                                        <div class="calendar-event-speaker-picture" style="background-image: url('assets/images/speaker-1.png')"></div>
-                                        <a href="#speaker-link-1" title="GO TO SPEAKER"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="calendar-event-box">
-                            <div class="row">
-                                <div class="column col-md-8 col-sm-8 col-xs-12">
-                                    <div class="calendar-time">10.00</div>
-                                    <div class="calendar-event">Jane Doe Presentation</div>
-                                    <div class="calendar-place">Conference Hall 1</div>
-                                    <div class="calendar-event-speaker-name">by <span>JANE DOE</span></div>
-                                </div>
-                                <div class="column col-md-4 col-sm-4 col-xs-12">
-                                    <div class="calendar-speaker-picture-area">
-                                        <div class="calendar-event-speaker-picture" style="background-image: url('assets/images/speaker-3.png')"></div>
-                                        <a href="#speaker-link-3" title="GO TO SPEAKER"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="calendar-event-box">
-                            <div class="row">
-                                <div class="column col-md-8 col-sm-8 col-xs-12">
-                                    <div class="calendar-time">12.00</div>
-                                    <div class="calendar-event">Coctail</div>
-                                    <div class="calendar-place">Main Hall</div>
-                                    <div class="calendar-event-speaker-name">by <span>GOLDEN SPONSOR</span></div>
-                                </div>
-                                <div class="column col-md-4 col-sm-4 col-xs-12">
-                                    <div class="calendar-speaker-picture-area">
-                                        <div class="calendar-event-icon">
-                                            <i class="fa fa-glass" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="calendar-event-box">
-                            <div class="row">
-                                <div class="column col-md-8 col-sm-8 col-xs-12">
-                                    <div class="calendar-time">15.00</div>
-                                    <div class="calendar-event">Jane Doe Presentation</div>
-                                    <div class="calendar-place">Conference Hall 1</div>
-                                    <div class="calendar-event-speaker-name">by <span>JANE DOE</span></div>
-                                </div>
-                                <div class="column col-md-4 col-sm-4 col-xs-12">
-                                    <div class="calendar-speaker-picture-area">
-                                        <div class="calendar-event-speaker-picture" style="background-image: url('assets/images/speaker-4.png')"></div>
-                                        <a href="#speaker-link-4" title="GO TO SPEAKER"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="calendar-event-box">
-                            <div class="row">
-                                <div class="column col-md-8 col-sm-8 col-xs-12">
-                                    <div class="calendar-time">20.00</div>
-                                    <div class="calendar-event">Dinner</div>
-                                    <div class="calendar-place">Dining Hall</div>
-                                    <div class="calendar-event-speaker-name">by <span>GOLDEN SPONSOR</span></div>
-                                </div>
-                                <div class="column col-md-4 col-sm-4 col-xs-12">
-                                    <div class="calendar-speaker-picture-area">
-                                        <div class="calendar-event-icon">
-                                            <i class="fa fa-cutlery" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="calendar-show-item calendar-show-right" id="calendar-show-item-3">
-                       <div class="calendar-day">DAY 3<span>2nd JANUARY</span></div>
-                        <div class="calendar-event-box">
-                            <div class="row">
-                                <div class="column col-md-8 col-sm-8 col-xs-12">
-                                    <div class="calendar-time">9.00</div>
-                                    <div class="calendar-event">Opening Ceremonies</div>
-                                    <div class="calendar-place">Conference Hall 1</div>
-                                    <div class="calendar-event-speaker-name">by <span>JOHN DOE</span></div>
-                                </div>
-                                <div class="column col-md-4 col-sm-4 col-xs-12">
-                                    <div class="calendar-speaker-picture-area">
-                                        <div class="calendar-event-speaker-picture" style="background-image: url('assets/images/speaker-1.png')"></div>
-                                        <a href="#speaker-link-1" title="GO TO SPEAKER"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="calendar-event-box">
-                            <div class="row">
-                                <div class="column col-md-8 col-sm-8 col-xs-12">
-                                    <div class="calendar-time">10.00</div>
-                                    <div class="calendar-event">Jane Doe Presentation</div>
-                                    <div class="calendar-place">Conference Hall 1</div>
-                                    <div class="calendar-event-speaker-name">by <span>JANE DOE</span></div>
-                                </div>
-                                <div class="column col-md-4 col-sm-4 col-xs-12">
-                                    <div class="calendar-speaker-picture-area">
-                                        <div class="calendar-event-speaker-picture" style="background-image: url('assets/images/speaker-6.png')"></div>
-                                        <a href="#speaker-link-6" title="GO TO SPEAKER"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="calendar-event-box">
-                            <div class="row">
-                                <div class="column col-md-8 col-sm-8 col-xs-12">
-                                    <div class="calendar-time">15.00</div>
-                                    <div class="calendar-event">Closing Ceremonies</div>
-                                    <div class="calendar-place">Conference Hall 1</div>
-                                    <div class="calendar-event-speaker-name">by <span>JOHN DOE</span></div>
-                                </div>
-                                <div class="column col-md-4 col-sm-4 col-xs-12">
-                                    <div class="calendar-speaker-picture-area">
-                                        <div class="calendar-event-speaker-picture" style="background-image: url('assets/images/speaker-5.png')"></div>
-                                        <a href="#speaker-link-5" title="GO TO SPEAKER"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column col-md-2 hidden-sm hidden-xs">
-                <div class="calendar-right-arrow"><a href="javascript:void(0)" title="Next" id="calendar-arrow-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></a></div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid" id="latestnews">
-    <div class="container">
-        <div class="row">
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-            <div class="column col-md-11 col-sm-12 col-xs-12">
-                <div class="latestnews-header">
-                    <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-                    <h2>LATEST NEWS</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="page-icon-animation" id="page-icon-3">
-        <div class="page-icon-area news-icon">
-            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-        </div>
-    </div>
-</div>
-    <div class="container-fluid" id="homenews">
-    <div class="container">
-        <div class="row">
-            <div class="column col-md-1 col-sm-6 col-xs-6">
-                <div class="content-news-left-arrow"><a href="javascript:void(0)" title="Prev" id="content-news-arrow-left"><i class="fa fa-chevron-left" aria-hidden="true"></i></a></div>
-            </div>
-            <div class="column hidden-lg hidden-md col-sm-6 col-xs-6">
-                <div class="content-news-right-arrow"><a href="javascript:void(0)" title="Next" id="content-news-arrow-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></a></div>
-            </div>
-            <div class="column col-md-10 col-sm-12 col-xs-12">
-                <div class="content-news-area">
-                       <div class="content-news-area-item news-item-current" id="news-item-1">
-                            <div class="row">
-                           <div class="column col-md-5 col-sm-12 col-xs-12">
-                                <div class="homenews-image" style="background-image: url('assets/images/news-image.jpg')"></div>
-                            </div>
-                            <div class="column col-md-7 col-sm-12 col-xs-12">
-                                <div class="homenews-content-area">
-                                        <div class="homenews-header"><a href="javascript:void(0)" title="Save The Date">Save the date!</a></div>
-                                        <div class="homenews-writing">
-                                            You are cordially invited to CAG EVENT 2017 in London which will be held on December 31st 2017. The invitations are 120 Euro + VAT per person and because the space is limited to 2400 attendee only, we will appreciate if you can contact <a href="http://www.cagproject.com/cdn-cgi/l/email-protection#1d6472686f7f686e7473786e6e5d6472686f7f686e7473786e6e337e7270" target="_top"><span class="__cf_email__" data-cfemail="87fee8f2f5e5f2f4eee9e2f4f4c7fee8f2f5e5f2f4eee9e2f4f4a9e4e8ea">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a> for further information and book your place.
-                                        </div>
-                                        <div class="homenews-date">Mar 15th, 2017</div>
-                                </div>
-                            </div>
-                            </div>
                        </div>
-                       <div class="content-news-area-item news-item-right" id="news-item-2">
-                            <div class="row">
-                           <div class="column col-md-5 col-sm-12 col-xs-12">
-                                <div class="homenews-image" style="background-image: url('assets/images/news-image.jpg')"></div>
-                            </div>
-                            <div class="column col-md-7 col-sm-12 col-xs-12">
-                                <div class="homenews-content-area">
-                                        <div class="homenews-header"><a href="javascript:void(0)" title="Save The Date">Save the date!</a></div>
-                                        <div class="homenews-writing">
-                                            You are cordially invited to CAG EVENT 2017 in London which will be held on December 31st 2017. The invitations are 120 Euro + VAT per person and because the space is limited to 2400 attendee only, we will appreciate if you can contact <a href="http://www.cagproject.com/cdn-cgi/l/email-protection#1960766c6b7b6c6a70777c6a6a5960766c6b7b6c6a70777c6a6a377a7674" target="_top"><span class="__cf_email__" data-cfemail="a4ddcbd1d6c6d1d7cdcac1d7d7e4ddcbd1d6c6d1d7cdcac1d7d78ac7cbc9">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a> for further information and book your place.
-                                        </div>
-                                        <div class="homenews-date">Feb 15th, 2017</div>
-                                </div>
-                            </div>
-                            </div>
-                       </div>
-                       <div class="content-news-area-item news-item-right" id="news-item-3">
-                            <div class="row">
-                           <div class="column col-md-5 col-sm-12 col-xs-12">
-                                <div class="homenews-image" style="background-image: url('assets/images/news-image.jpg')"></div>
-                            </div>
-                            <div class="column col-md-7 col-sm-12 col-xs-12">
-                                <div class="homenews-content-area">
-                                        <div class="homenews-header"><a href="javascript:void(0)" title="Save The Date">Save the date!</a></div>
-                                        <div class="homenews-writing">
-                                            You are cordially invited to CAG EVENT 2017 in London which will be held on December 31st 2017. The invitations are 120 Euro + VAT per person and because the space is limited to 2400 attendee only, we will appreciate if you can contact <a href="http://www.cagproject.com/cdn-cgi/l/email-protection#f58c9a80879780869c9b908686b58c9a80879780869c9b908686db969a98" target="_top"><span class="__cf_email__" data-cfemail="641d0b11160611170d0a011717241d0b11160611170d0a0117174a070b09">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a> for further information and book your place.
-                                        </div>
-                                        <div class="homenews-date">Jan 15th, 2017</div>
-                                </div>
-                            </div>
-                            </div>
+                    </div>
+						
+					
+				</div>
+				<a href="#one" class="more">Learn More</a>
+			</section>
 
-                    </div>
-                </div>
-            </div>
-            <div class="column col-md-1 hidden-sm hidden-xs">
-                <div class="content-news-right-arrow"><a href="javascript:void(0)" title="Next" id="content-news-arrow-right2"><i class="fa fa-chevron-right" aria-hidden="true"></i></a></div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid" id="venueinfo-top">
-    <div class="container">
-        <div class="row">
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-            <div class="column col-md-10 col-sm-12 col-xs-12">
-                <div class="venueinfo-header">
-                    <i class="fa fa-cutlery" aria-hidden="true"></i>
-                    <h2>VENUE INFORMATION</h2>
-                </div>
-            </div>
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-        </div>
-    </div>
-    <div class="page-icon-animation" id="page-icon-4">
-        <div class="page-icon-area venue-icon">
-            <i class="fa fa-cutlery" aria-hidden="true"></i>
-        </div>
-    </div>
-</div>
-<div class="container-fluid" id="venueinfo-mid"></div>
-<div class="container-fluid" id="venueinfo-bottom">
-    <div class="container">
-        <div class="row">
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-            <div class="column col-md-10 col-sm-12 col-xs-12">
-                <div class="venueinfo-area">
-                    <div class="venueinfo-venue">METHODIST CENTRAL HALL</div>
-                    <div class="venueinfo-address">Storey's Gate <br>Westminster / London / England</div>
-                    <div class="venueinfo-tel">T +44 99 9999 9999<br>F +44 99 9999 9999</div>
-                    <div class="venueinfo-link hidden-xs">
-                        <a href="assets/images/london-hall-1.jpg" class="fancybox" data-fancybox-group="group" title="Gallery">All Photos
-                            <i class="fa fa-angle-right" aria-hidden="true"></i>
-                            <i class="fa fa-angle-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="venuephotos" style="display:none">
-                    <a href="assets/images/london-hall-2.jpg" class="fancybox" data-fancybox-group="group" title="Gallery"></a>
-                    <a href="assets/images/london-hall-3.jpg" class="fancybox" data-fancybox-group="group" title="Gallery"></a>
-            </div>
-            <div class="column col-xs-12 hidden-sm hidden-md hidden-lg">
-                <div class="venueinfo-link-xs">
-                    <a href="assets/images/london-hall-1.jpg" class="fancybox" data-fancybox-group="group" title="Gallery">All Photos
-                        <i class="fa fa-angle-right" aria-hidden="true"></i>
-                        <i class="fa fa-angle-right" aria-hidden="true"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid" id="contact-top">
-    <div class="container">
-        <div class="row">
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-            <div class="column col-md-10 col-sm-12 col-xs-12">
-                <div class="contact-header">
-                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                    <h2>CONTACT</h2>
-                </div>
-            </div>
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-        </div>
-    </div>
-    <div class="page-icon-animation" id="page-icon-5">
-        <div class="page-icon-area contact-icon">
-            <i class="fa fa-envelope-o" aria-hidden="true"></i>
-        </div>
-    </div>
-</div>
-<div class="container-fluid" id="contact-mid"></div>
-<div class="container-fluid" id="contact-bottom">
-    <div class="container">
-        <div class="row">
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-            <div class="column col-md-4 col-sm-5 col-xs-12">
-                <div class="contact-writing">
-                    395 W Carriage Drive <div class="hidden-sm hidden-md hidden-lg"></div>Your Office No:10<br>Hyde Park 5061 <div class="hidden-sm hidden-md hidden-lg"></div>London / England<br><br>T +44 99 9999 9999<br>F +44 99 9999 9999<br><br><a href="http://www.cagproject.com/cdn-cgi/l/email-protection#4e37213b3c2b232f27220e37213b3c2b232f2722602d212371" target="_top" title="Mail"><span class="__cf_email__" data-cfemail="82fbedf7f0e7efe3ebeec2fbedf7f0e7efe3ebeeace1edef">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a><br><a href="http://www.yourwebsite.com/" title="Website">www.yourwebsite.com</a>
-                </div>
-                <div class="contact-social-icons">
-                    <ul>
-                        <li><a href="javascript:void(0)" target="_blank" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="javascript:void(0)" target="_blank" title="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li><a href="javascript:void(0)" target="_blank" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                        <li><a href="javascript:void(0)" target="_blank" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="javascript:void(0)" target="_blank" title="googleplus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="column col-md-6 col-sm-7 col-xs-12">
-                <form action="javascript:void(0)" method="post" id="contactform">
-                <div class="contact-form">
-                    <div class="row">
-                        <div class="column col-md-6 col-sm-12 col-xs-12">
-                            <div class="contact-input-area">
-                                <input type="text" name="contactname" placeholder="NAME" id="contactname">
-                            </div>
-                        </div>
-                        <div class="column col-md-6 col-sm-12 col-xs-12">
-                            <div class="contact-input-area">
-                                <input type="text" name="contactsurname" placeholder="SURNAME" id="contactsurname">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="column col-md-6 col-sm-12 col-xs-12">
-                            <div class="contact-input-area">
-                                <input type="text" name="contactemail" placeholder="E-MAIL" id="contactemail">
-                            </div>
-                        </div>
-                        <div class="column col-md-6 col-sm-12 col-xs-12">
-                            <div class="contact-input-area">
-                                <input type="text" name="contactphone" placeholder="TELEPHONE" id="contactphone">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="column col-md-12 col-sm-12 col-xs-12">
-                            <div class="contact-input-area" style="height: 120px; padding-top:10px;">
-                                <textarea name="contactmessage" placeholder="MESSAGE" rows="4" id="contactmessage"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="column col-md-12 col-sm-12 col-xs-12">
-                            <div class="contact-submit-area">
-                                <input type="submit" name="contactsubmit" value="SEND">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </form>
-            </div>
-            <div class="column col-md-1 hidden-sm hidden-xs"></div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid" id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="column col-md-9 col-sm-9 col-xs-12">
-                <div class="footer-rights">C&amp;G Event 2017 &copy; 2017. All Rights Reserved.</div>
-            </div>
-            <div class="column col-md-3 col-sm-3 col-xs-12">
-                <div class="footer-cag">
-                    <a href="#" title="C&G" target="_blank"><img src="assets/images/cag.svg" alt="C&G Logo"/></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- <script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body> -->
 
-<script type="text/javascript" src="assets/js/jsDate.js"></script>
-<script type="text/javascript" src="assets/js/jquery-1.12.2-min.js"></script>
-<script type="text/javascript" src="assets/js/jquery.countdown.min.js"></script>
-<script type="text/javascript" src="assets/js/scrolling.js"></script>
-<script type="text/javascript" src="assets/js/jquery.fancybox.js"></script>
-<script type="text/javascript" src="assets/js/jquery.fancybox-buttons3447.js?v=1.0.5"></script>
-<script type="text/javascript" src="assets/js/jquery.fancybox-mediac924.js?v=1.0.6"></script>
-<script type="text/javascript" src="assets/js/validate.js"></script>
-<script type="text/javascript" src="assets/js/main.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqPLRFpL8YavE2CM2A-ehGS2XR0dELZfA&amp;callback=initmap" async defer></script>
-<script type="text/javascript">
-	$(document).ready(function() {
-        setcountdowntimer('2017/12/31');
-	});
-</script>
+
+		   <section id="four" class="wrapper post bg-img" data-bg="banner2.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>About College</h2>
+							<p>Sri SaiRam Institute of Technology</p>
+						</header>
+						<div class="content">
+							<p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate a duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
+						</div>
+						<footer>
+							<a href="generic.html" class="button alt">Learn More</a>
+						</footer>
+					</article>
+				</div>
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>About Department</h2>
+							<p>Computer Science & Engineering</p>
+						</header>
+						<div class="content">
+							<p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate a duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
+						</div>
+						<footer>
+							<a href="generic.html" class="button alt">Learn More</a>
+						</footer>
+					</article>
+				</div>
+			</section>
+
+
+			
+
+
+
+
+
+		<!-- One -->
+			<section id="one" class="wrapper post bg-img" data-bg="banner5.jpg">
+				<div class="inner">
+
+					<article class="box">
+						<header>
+							<h2>Valar Codulus</h2>
+							<p>CODING</p>
+						</header>
+						<div class="content">
+							<p>'Valar codulus'- the name may be all 'greek and latin' to you. But , beware if you don't brush up your coding skills the entire event might turn out to be the same.</p>
+						</div>
+						
+						<br>
+						<footer>
+							<button type="button" class="button alt" data-toggle="modal" data-target="#valarModal">Learn More</button>
+						</footer>
+					</article>
+				</div>
+				
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Walder Web</h2>
+							<p>WEB DESIGNING</p>
+						</header>
+						<div class="content">
+							<p>For a long time Mr.Spiderman has been the best Web Designer. Do you think, you can beat him? We shall see! 
+								Show case your skills here as a Web Designer. May the odds be in your favour </p>
+						</div>
+						
+						<br>
+						<footer>
+							<a class="button alt" href="generic.html" data-toggle="modal" data-target="#webModal">Learn More</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#two" class="more">Learn More</a>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper post bg-img" data-bg="banner4.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Bug SLayer</h2>
+							<p>DEBUGGING</p>
+						</header>
+						<div class="content">
+							<p>Bugs- an elusive part in a program that takes it wide of the mark.
+								They say, debugging ends (for a while though), when the person gets tired.Here we present a chance to break the myth.Remove the bugs in the program before they enter your brain and make ou mad.</p>
+						</div>
+						
+						<br>
+						<footer>
+							<a href="generic.html" class="button alt" data-toggle="modal" data-target="#bugModal">Learn More</a>
+						</footer>
+					</article>
+				</div>
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Maesters Maestro</h2>
+							<p>PAPER PRESENTATION</p>
+						</header>
+						<div class="content">
+							<p>They say, 'the pen is mightier than the sword.' So grab your pen and papers for the ultimate showdown of scholars. We prepared the arena so you could astonish us with your innovative ideas and proposals. Get ready for the battle of the intellects. The throne awaits the true knight of the minds!  </p>
+						</div>
+						
+						<br>
+						<footer>
+							<a href="generic.html" class="button alt" data-toggle="modal" data-target="#masterModal">Learn More</a>
+						</footer>
+					</article>
+				</div>
+				
+				<a href="#three" class="more">Learn More</a>
+			</section>
+
+
+			<section id="two" class="wrapper post bg-img" data-bg="banner7.jpEg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Three Eyed Raven</h2>
+							<p>GOOGLE IT</p>
+						</header>
+						<div class="content">
+							<p>U know u are desperate for an answer when u look at the second page of Google. Now, how desperate are u gonna be to "Google it! "
+								Easy huh? Well, we don't think so...We challenge u to unearthen stuffs by just using the search. Image search?? Not at all. All u have is the basic search to prove ur googling skills.</p>
+						</div>
+						
+						<br>
+						<footer>
+							<a href="generic.html" class="button alt" data-toggle="modal" data-target="#threeModal">Learn More</a>
+						</footer>
+					</article>
+				</div>
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2> Surprise Events</h2>
+							<p>NON TECHNICAL</p>
+						</header>
+						<div class="content">
+							<p>They say, 'the pen is mightier than the sword.' So grab your pen and papers for the ultimate showdown of scholars. We prepared the arena so you could astonish us with your innovative ideas and proposals. Get ready for the battle of the intellects. The throne awaits the true knight of the minds!  </p>
+						</div>
+						
+						<br>
+					</article>
+				</div>
+				
+				<a href="#three" class="more">Learn More</a>
+			</section>
+
+
+			 <section id="five" class="wrapper post bg-img" data-bg="banner6.png">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Online Application Developement Event</h2>
+							<p>Android</p>
+						</header>
+						<div class="content">
+							<p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim platea vestibulum lacinia et elit ante scelerisque a natoque ad suspendisse nulla a urna in tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
+						</div>
+						<footer>
+							<a href="generic.html" class="button alt">Learn More</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#four" class="more">Learn More</a>
+			</section>
+		<!-- Three -->
+			<section id="three" class="wrapper post bg-img" data-bg="banner4.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>WebBoomBaa</h2>
+							<p>Internship</p>
+						</header>
+						<div class="content">
+							<p>An Internship for the Walder Web and Online Application Developement Event Winner by the Start-Up WebBoomBaa ( A Proficient chennai based Digital Marketing Company ). An Amazing Experience
+								of working in the Tech Industry. Visit webboombaa.com</p>
+						</div>
+						<footer>
+							<a href="generic.html" class="button alt">Learn More</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#four" class="more">Learn More</a>
+			</section>
+
+			<section id="five" class="wrapper post bg-img" data-bg="banner.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Online Games</h2>
+							
+						</header>
+						<div class="content">
+							<p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim platea vestibulum lacinia et elit ante scelerisque a natoque ad suspendisse nulla a urna in tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
+						</div>
+						<footer>
+							<a href="generic.html" class="button alt">PLAY</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#four" class="more">Learn More</a>
+			</section>
+
+
+		<!--Maps-->
+		<div id="map"></div>
+
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+
+					<h2>Contact Me</h2>
+
+					<form action="#" method="post">
+
+						<div class="field half first">
+							<label for="name">Name</label>
+							<input name="name" id="name" type="text" placeholder="Name">
+						</div>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input name="email" id="email" type="email" placeholder="Email">
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+						</div>
+						<ul class="actions">
+							<li><input value="Send Message" class="button alt" type="submit"></li>
+						</ul>
+					</form>
+
+					<ul class="icons">
+						<li><a href="#" class="icon round fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://www.facebook.com/sintacs16/" class="icon round fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon round fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
+
+					<div class="copyright">
+						&copy; Design: <a href="https://www.sairamit.edu.in">Sri SaiRam Institute of Technology</a>.
+					</div>
+
+				</div>
+			</footer>
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			<!-- Latest compiled and minified JavaScript -->
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+			<script>
+			function initMap() {
+				var sairamit = {lat: 12.9606578, lng: 80.0510635};
+				var map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 15,
+				center: sairamit
+				});
+				var marker = new google.maps.Marker({
+				position: sairamit,
+				map: map
+				});
+			}
+			</script>
+			<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzLgWgapgejUVwz4oCq2T-xt6R8NnsS9A&callback=initMap">
+			</script>
+
+	</body>
 </html>
