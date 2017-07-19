@@ -1,482 +1,269 @@
-<!DOCTYPE HTML>
-<!--
-	Road Trip by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
-<html>
+<!DOCTYPE html>
+<html class="js">
 	<head>
-		<title>SINTACS '17</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Sintacs'17 | August 9th</title>
+
+		<!-- Stylesheets -->
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/ionicons.min.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- Google Fonts -->
+
+		<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic|Cinzel:400,700,900' rel='stylesheet' type='text/css'>
+
+		<link rel="icon" type="image/png" href="assets/sintacsLogo.png">
 	</head>
+
 	<body>
+		<div id="preloader"></div>
 
-		<!-- Header -->
-			<header id="header">
-				<div class="logo"><a href="#">SINTACS '17</a> </div>
-				<a href="#menu"><span>Menu</span></a>
-			</header>
-
-		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="#">Home</a></li>
-					<li><a href="#four">About</a></li>
-					<li><a href="#one">Events</a></li>
-					<li><a href="#three">Internships</a></li>
-					<li><a href="#maps">Maps</a></li>
-					<li><a href="#footer">Registration</a></li>
-				</ul>
-			</nav>
-
-		<!-- Banner -->
-		<!--
-			Note: To show a background image, set the "data-bg" attribute below
-			to the full filename of your image. This is used in each section to set
-			the background image.
-		-->
-
-
-		<!--Modals-->
-
-		<!-- Valar Codulus Modal -->
-		<div id="valarModal" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-
-			<!-- Modal content-->
-			<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title">VALAR CODULUS</h4>
-			</div>
-			<div class="modal-body">
-				<div class="content">Rules: <br>
-					1. It is an Individual Event. <br>
-					2. Both Prelims & Finals will be conducted OnSite. <br>
-					3. The contestants have the liberty to code in any language of their choice.
-				</div>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-success modal-btn" data-dismiss="modal">Close</button>
-			</div>
-			</div>
-
-		</div>
-		</div>
-
-		<!-- Walder Web Modal -->
-		<div id="webModal" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-
-			<!-- Modal content-->
-			<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title">WALDER WEB</h4>
-			</div>
-			<div class="modal-body">
-				<div class="content">
-					Rules: <br>
-					1. Members per Team: 2 <br>
-					2. Both Prelims & Finals will be conducted OnSite. <br>
-					3. A Special Round will be conducted for an Internship.
-				</div>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-success modal-btn" data-dismiss="modal">Close</button>
-			</div>
-			</div>
-
-		</div>
-		</div>
-
-		<!-- Bug Slayer Modal -->
-		<div id="bugModal" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-
-			<!-- Modal content-->
-			<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title">BUG SLAYER</h4>
-			</div>
-			<div class="modal-body">
-				<div class="content">
-						Rules: <br>
-						1. Members per Team: 2 <br>
-						2. Prelims - MCQs, Final Round - debugging <br>
-						3. Languages to be used - C / C++
-				</div>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-success modal-btn" data-dismiss="modal">Close</button>
-			</div>
-			</div>
-
-		</div>
-		</div>
-
-		<!-- Maesters Master Modal -->
-		<div id="masterModal" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-
-			<!-- Modal content-->
-			<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title">MAESTERS MASTER</h4>
-			</div>
-			<div class="modal-body">
-				<div class="content">
-					Rules: <br>
-					1. Members per Team: 2 <br>
-					2. Paper Abstract Submission DeadLine: 05-08-2017 <br><br>
-					Topics: <br>
-					1. Internet of Things <br>
-					2. Data Analytics <br>
-					3. Cyber Crime & Security <br>
-					4. Grid & Cloud Computing  <br>
-					5. Augmented Reality / Virtual Reality  <br>
-				</div>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-success modal-btn" data-dismiss="modal">Close</button>
-			</div>
-			</div>
-
-		</div>
-		</div>
-
-		<!-- Three Eyed Raven Modal -->
-		<div id="threeModal" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-
-			<!-- Modal content-->
-			<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title">THREE EYED RAVEN</h4>
-			</div>
-			<div class="modal-body">
-				<div class="content">
-					Rules: <br>
-					1. Members per Team: 2 <br>
-					2. Both Prelims & Finals will be conducted OnSite. 
-				</div>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-success modal-btn" data-dismiss="modal">Close</button>
-			</div>
-			</div>
-
-		</div>
-		</div>
-
-
-
-
-
-			<section id="banner" class="bg-img" data-bg="banner3.jpg">
-				<div class="inner">
-					<div class="container-fluid">
-					   <div class="col-md-2 col-sm-10">
-                        <div class="block">
-                          <div id="logo"></div>
-                        </div>
-                       </div>
-                    </div>
-						
-					
-				</div>
-				<a href="#one" class="more">Learn More</a>
-			</section>
-
-
-
-		   <section id="four" class="wrapper post bg-img" data-bg="banner2.jpg">
-				<div class="inner">
-					<article class="box">
-						<header>
-							<h2>About College</h2>
-							<p>Sri SaiRam Institute of Technology</p>
-						</header>
-						<div class="content">
-							<p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate a duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
+		<section id="video-wrap" >
+			<div id="video"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="logo text-center wow fadeInDown">
+							<a href="#"><img src="assets/newlogo.png"></a>
 						</div>
-						<footer>
-							<a href="generic.html" class="button alt">Learn More</a>
-						</footer>
-					</article>
+					</div>
 				</div>
-				<div class="inner">
-					<article class="box">
-						<header>
-							<h2>About Department</h2>
-							<p>Computer Science & Engineering</p>
-						</header>
-						<div class="content">
-							<p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate a duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
-						</div>
-						<footer>
-							<a href="generic.html" class="button alt">Learn More</a>
-						</footer>
-					</article>
-				</div>
-			</section>
+				<div class="row">
+					<div class="col-md-7 wow fadeInLeft" style="z-index: 9999;">
+						<div class="headline-wrap">
+							<h1 class="headline" style="color: #FFDF00">
+							 EVENTS
+							<br>
+							<span class="quotes">Walder Web</span>
+							<span class="quotes">Maesters Master</span>
+							<span class="quotes">ThreeEyed raven</span>
+							<span class="quotes">Valar Codulus</span>
+							<span class="quotes">Bugslayer</span>
+							<span class="quotes">Online App Event</span>
+							<span class="quotes">Surprise Events</span>
+							<span class="quotes">ON AUGUST9th</span>
 
-
-			
-
-
-
-
-
-		<!-- One -->
-			<section id="one" class="wrapper post bg-img" data-bg="banner5.jpg">
-				<div class="inner">
-
-					<article class="box">
-						<header>
-							<h2>Valar Codulus</h2>
-							<p>CODING</p>
-						</header>
-						<div class="content">
-							<p>'Valar codulus'- the name may be all 'greek and latin' to you. But , beware if you don't brush up your coding skills the entire event might turn out to be the same.</p>
-						</div>
-						
-						<br>
-						<footer>
-							<button type="button" class="button alt" data-toggle="modal" data-target="#valarModal">Learn More</button>
-						</footer>
-					</article>
-				</div>
-				
-				<div class="inner">
-					<article class="box">
-						<header>
-							<h2>Walder Web</h2>
-							<p>WEB DESIGNING</p>
-						</header>
-						<div class="content">
-							<p>For a long time Mr.Spiderman has been the best Web Designer. Do you think, you can beat him? We shall see! 
-								Show case your skills here as a Web Designer. May the odds be in your favour </p>
-						</div>
-						
-						<br>
-						<footer>
-							<a class="button alt" href="generic.html" data-toggle="modal" data-target="#webModal">Learn More</a>
-						</footer>
-					</article>
-				</div>
-				<a href="#two" class="more">Learn More</a>
-			</section>
-
-		<!-- Two -->
-			<section id="two" class="wrapper post bg-img" data-bg="banner4.jpg">
-				<div class="inner">
-					<article class="box">
-						<header>
-							<h2>Bug SLayer</h2>
-							<p>DEBUGGING</p>
-						</header>
-						<div class="content">
-							<p>Bugs- an elusive part in a program that takes it wide of the mark.
-								They say, debugging ends (for a while though), when the person gets tired.Here we present a chance to break the myth.Remove the bugs in the program before they enter your brain and make ou mad.</p>
-						</div>
-						
-						<br>
-						<footer>
-							<a href="generic.html" class="button alt" data-toggle="modal" data-target="#bugModal">Learn More</a>
-						</footer>
-					</article>
-				</div>
-				<div class="inner">
-					<article class="box">
-						<header>
-							<h2>Maesters Maestro</h2>
-							<p>PAPER PRESENTATION</p>
-						</header>
-						<div class="content">
-							<p>They say, 'the pen is mightier than the sword.' So grab your pen and papers for the ultimate showdown of scholars. We prepared the arena so you could astonish us with your innovative ideas and proposals. Get ready for the battle of the intellects. The throne awaits the true knight of the minds!  </p>
-						</div>
-						
-						<br>
-						<footer>
-							<a href="generic.html" class="button alt" data-toggle="modal" data-target="#masterModal">Learn More</a>
-						</footer>
-					</article>
-				</div>
-				
-				<a href="#three" class="more">Learn More</a>
-			</section>
-
-
-			<section id="two" class="wrapper post bg-img" data-bg="banner7.jpEg">
-				<div class="inner">
-					<article class="box">
-						<header>
-							<h2>Three Eyed Raven</h2>
-							<p>GOOGLE IT</p>
-						</header>
-						<div class="content">
-							<p>U know u are desperate for an answer when u look at the second page of Google. Now, how desperate are u gonna be to "Google it! "
-								Easy huh? Well, we don't think so...We challenge u to unearthen stuffs by just using the search. Image search?? Not at all. All u have is the basic search to prove ur googling skills.</p>
-						</div>
-						
-						<br>
-						<footer>
-							<a href="generic.html" class="button alt" data-toggle="modal" data-target="#threeModal">Learn More</a>
-						</footer>
-					</article>
-				</div>
-				<div class="inner">
-					<article class="box">
-						<header>
-							<h2> Surprise Events</h2>
-							<p>NON TECHNICAL</p>
-						</header>
-						<div class="content">
-							<p>They say, 'the pen is mightier than the sword.' So grab your pen and papers for the ultimate showdown of scholars. We prepared the arena so you could astonish us with your innovative ideas and proposals. Get ready for the battle of the intellects. The throne awaits the true knight of the minds!  </p>
-						</div>
-						
-						<br>
-					</article>
-				</div>
-				
-				<a href="#three" class="more">Learn More</a>
-			</section>
-
-
-			 <section id="five" class="wrapper post bg-img" data-bg="banner6.png">
-				<div class="inner">
-					<article class="box">
-						<header>
-							<h2>Online Application Developement Event</h2>
-							<p>Android</p>
-						</header>
-						<div class="content">
-							<p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim platea vestibulum lacinia et elit ante scelerisque a natoque ad suspendisse nulla a urna in tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
-						</div>
-						<footer>
-							<a href="generic.html" class="button alt">Learn More</a>
-						</footer>
-					</article>
-				</div>
-				<a href="#four" class="more">Learn More</a>
-			</section>
-		<!-- Three -->
-			<section id="three" class="wrapper post bg-img" data-bg="banner4.jpg">
-				<div class="inner">
-					<article class="box">
-						<header>
-							<h2>WebBoomBaa</h2>
-							<p>Internship</p>
-						</header>
-						<div class="content">
-							<p>An Internship for the Walder Web and Online Application Developement Event Winner by the Start-Up WebBoomBaa ( A Proficient chennai based Digital Marketing Company ). An Amazing Experience
-								of working in the Tech Industry. Visit webboombaa.com</p>
-						</div>
-						<footer>
-							<a href="generic.html" class="button alt">Learn More</a>
-						</footer>
-					</article>
-				</div>
-				<a href="#four" class="more">Learn More</a>
-			</section>
-
-			<section id="five" class="wrapper post bg-img" data-bg="banner.jpg">
-				<div class="inner">
-					<article class="box">
-						<header>
-							<h2>Online Games</h2>
+							</h1>
+						<!--	Subscribe and Stay UPDATED.
 							
-						</header>
-						<div class="content">
-							<p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim platea vestibulum lacinia et elit ante scelerisque a natoque ad suspendisse nulla a urna in tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
+							<form role="form" id="subscribe-form" class="row">
+								<div class="form-group col-xs-10">
+									<input type="email" name="email" class="form-control mc-email" id="subscriber-email" placeholder="Email" required>
+								</div>
+								<div class="form-group col-xs-2 push-btn-left">
+									<button id="subscribe-button" type="submit" class="btn btn-default mc-btn">
+										<i class="ion-paper-airplane"></i>
+									</button>
+								</div>
+							</form>
+							<!-- SUCCESS OR ERROR MESSAGES -->
+            				<!--<div id="subscription-response"></div>   -->
 						</div>
-						<footer>
-							<a href="generic.html" class="button alt">PLAY</a>
-						</footer>
-					</article>
+					</div>
+					<br>
+					<div class="col-md-5  wow fadeInRight">
+						<div class="clock row">
+					        <div class="col-xs-3 col-sm-3 col-md-6">
+					            <div class="countdown-time-value clock-item clock-days">
+					            	<div class="wrap">
+						                <div class="inner">
+						                    <div id="canvas-days" class="clock-canvas"></div>
+
+						                    <div class="text">
+						                        <p class="val">0</p>
+						                        <p class="type-days type-time">DAYS</p>
+						                    </div><!-- /.text -->
+						                </div><!-- /.inner -->
+						            </div><!-- /.wrap -->
+					            </div>
+					        </div><!-- /.clock-item -->
+
+					        <div class="col-xs-3 col-sm-3 col-md-6">
+					            <div class="clock-item clock-hours countdown-time-value">
+					            	<div class="wrap">
+						                <div class="inner">
+						                    <div id="canvas-hours" class="clock-canvas"></div>
+
+						                    <div class="text">
+						                        <p class="val">0</p>
+						                        <p class="type-hours type-time">HOURS</p>
+						                    </div><!-- /.text -->
+						                </div><!-- /.inner -->
+						            </div><!-- /.wrap -->
+					            </div>
+					        </div><!-- /.clock-item -->
+
+					        <div class="col-xs-3 col-sm-3 col-md-6">
+					            <div class="clock-item clock-minutes countdown-time-value">
+					            	<div class="wrap">
+						                <div class="inner">
+						                    <div id="canvas-minutes" class="clock-canvas"></div>
+
+						                    <div class="text">
+						                        <p class="val">0</p>
+						                        <p class="type-minutes type-time">MINUTES</p>
+						                    </div><!-- /.text -->
+						                </div><!-- /.inner -->
+						            </div><!-- /.wrap -->
+					            </div>
+					        </div><!-- /.clock-item -->
+
+					        <div class="col-xs-3 col-sm-3 col-md-6">
+					        	<div class="clock-item clock-seconds countdown-time-value">
+					        		<div class="wrap">
+						                <div class="inner">
+						                    <div id="canvas-seconds" class="clock-canvas"></div>
+
+						                    <div class="text">
+						                        <p class="val">0</p>
+						                        <p class="type-seconds type-time">SECONDS</p>
+						                    </div><!-- /.text -->
+						                </div><!-- /.inner -->
+						            </div><!-- /.wrap -->
+					        	</div>
+					        </div><!-- /.clock-item -->
+					    </div>
+					</div>
 				</div>
-				<a href="#four" class="more">Learn More</a>
-			</section>
+			</div>
 
+			<div class="arrow-down text-center">
 
-		<!--Maps-->
-		<div id="map"></div>
+			    <a href="mainweb/index.html">  VIEW MORE &nbsp&nbsp</a>
+				<a href="mainweb/index.html" class="wow bounce" data-wow-duration="4s" data-wow-delay="1s" data-wow-iteration="1000"><i class="ion-chevron-down"></i></a>
 
+			</div>
+		</section>
+        
+	<!--	<section>
+			<nav id="nav-menu" class="navbar nav-layla" role="navigation">
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".main-nav">
+						<i class="ion-navicon"></i>
+					</button>
+					<a class="navbar-brand" href="#">LAYLA</a>
+				</div>
 
-					<h2>Contact Me</h2>
-
-					<form action="#" method="post">
-
-						<div class="field half first">
-							<label for="name">Name</label>
-							<input name="name" id="name" type="text" placeholder="Name">
-						</div>
-						<div class="field half">
-							<label for="email">Email</label>
-							<input name="email" id="email" type="email" placeholder="Email">
-						</div>
-						<div class="field">
-							<label for="message">Message</label>
-							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
-						</div>
-						<ul class="actions">
-							<li><input value="Send Message" class="button alt" type="submit"></li>
-						</ul>
-					</form>
-
-					<ul class="icons">
-						<li><a href="#" class="icon round fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="https://www.facebook.com/sintacs16/" class="icon round fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon round fa-instagram"><span class="label">Instagram</span></a></li>
+				<div class="collapse navbar-collapse main-nav">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#wrap">Top</a><span class="hover-li"></span></li>
+						<li><a href="#about">About</a><span class="hover-li"></span></li>
+						<li><a href="#contact">Contact</a><span class="hover-li"></span></li>
 					</ul>
+				</div>
+			</nav>
+		</section>   -->
 
-					<div class="copyright">
-						&copy; Design: <a href="https://www.sairamit.edu.in">Sri SaiRam Institute of Technology</a>.
+	<!--	<section id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="title text-center wow zoomIn">
+							<h1>ABOUT</h1>
+							<span class="title line"></span>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6 text-center wow fadeInLeft">
+						<img src="assets/lady.jpg" alt="Jane Doe" class="img-responsive portrait">
+					</div>
+					<div class="col-sm-6 wow fadeInRight">
+						<div class="about-text">
+							<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus itaque quos sunt, possimus inventore quo expedita earum animi optio, dignissimos placeat quaerat voluptatum deserunt voluptatibus molestias iure adipisci totam quidem. </p>
+
+							<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus itaque quos sunt, possimus inventore quo expedita earum animi optio, dignissimos placeat quaerat voluptatum deserunt voluptatibus molestias iure adipisci totam quidem. </p>
+
+							<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus itaque quos sunt, possimus inventore quo expedita earum animi optio, dignissimos placeat quaerat voluptatum deserunt voluptatibus molestias iure adipisci totam quidem. </p>
+							<div class="signature text-right">
+								<img src="assets/signature.png" class="img-responsive" alt="Jane Doe">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="title text-center wow zoomIn">
+							<h1>CONTACT US</h1>
+							<span class="title line"></span>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6 wow fadeInLeft">
+						<p>Send us your Query. Drop your Message</p>
+						<form id="contact-form" method="post" class="form afsana-form" role="form">
+							<div class="row">
+								<div class="col-sm-12 form-group">
+									<input class="form-control afsana-style" id="name" name="name" placeholder="Name" type="text" required autofocus />
+								</div>
+								<div class="col-sm-12 form-group">
+									<input class="form-control afsana-style" id="email" name="email" placeholder="Email" type="email" required />
+								</div>
+								<div class="col-sm-12 form-group">
+									<textarea class="form-control" id="message" name="message" placeholder="Message" rows="5"></textarea>
+								</div>
+								<div class="col-sm-12 form-group">
+									<button class="btn btn-primary afsana-btn" type="submit">Submit <i class="ion-arrow-graph-up-right"></i></button>
+								</div>
+							</div>
+						</form>
 					</div>
 
+					<div class="col-sm-6  wow fadeInRight">
+						<p>Like us on Facebook and Stay updated.</p>
+						<div class="facebook-box">
+							<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FTechNextit&amp;width&amp;height=258&amp;colorscheme=dark&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:258px;" allowTransparency="true"></iframe>
+						</div>
+						<div class="social-icons">
+							<ul>
+								<li class="facebook wow fadeInUp" data-wow-delay="1.1s"><a href="#"><i class="ion-social-facebook"></i></a></li>
+								<li class="twitter wow fadeInUp" data-wow-delay="1.2s"><a href="#"><i class="ion-social-twitter"></i></a></li>
+								<li class="googleplus wow fadeInUp" data-wow-delay="1.3s"><a href="#"><i class="ion-social-googleplus"></i></a></li>
+								<li class="github wow fadeInUp" data-wow-delay="1.5s"><a href="#"><i class="ion-social-github"></i></a></li>
+								<li class="linkedin wow fadeInUp" data-wow-delay="1.6s"><a href="#"><i class="ion-social-linkedin"></i></a></li>
+								<li class="youtube wow fadeInUp" data-wow-delay="1.7s"><a href="#"><i class="ion-social-youtube"></i></a></li>
+							</ul>
+						</div>
+					</div>
 				</div>
-			</footer>
+			</div>
+		</section>
+
+		<section id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8">
+						<p class="copyright text-left">Copyright © 2014 Your Website Link. All rights reserved.</p>
+					</div>
+					<div class="col-sm-4">
+						<p class="copyright text-right">Theme by <a href="https://themewagon.com/">ThemeWagon</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+   -->
 
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-			<!-- Latest compiled and minified JavaScript -->
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-			<script>
-			function initMap() {
-				var sairamit = {lat: 12.9606578, lng: 80.0510635};
-				var map = new google.maps.Map(document.getElementById('map'), {
-				zoom: 15,
-				center: sairamit
-				});
-				var marker = new google.maps.Marker({
-				position: sairamit,
-				map: map
-				});
-			}
-			</script>
-			<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzLgWgapgejUVwz4oCq2T-xt6R8NnsS9A&callback=initMap">
-			</script>
-
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.videoBG.js"></script>
+		<script src="js/jquery.sticky-kit.min.js"></script>
+		<script src="js/wow.min.js"></script>
+		<script src="js/kinetic.js"></script>
+		<script src="js/jquery.final-countdown.min.js"></script>
+		<script src="js/script.js"></script>
 	</body>
 </html>
