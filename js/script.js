@@ -22,7 +22,7 @@ $('#video').videoBG({
     mp4:'assets/fly.mp4',
     //ogv:'assets/bg.ogv',
     webm:'assets/fly.webm',
-    poster:'assets/poster1.jpg',
+    // poster:'assets/poster1.jpg',
     scale:true,
     zIndex:0,
     height: vidHeight
