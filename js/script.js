@@ -41,9 +41,9 @@ new WOW().init();
 // Count Down Timer
 
 $('.countdown').final_countdown({
-    start : 1330000000, //Here use Milisecond. To convert your time you can go to this(https://currentmillis.com/) website. 
+    start : 1398211122, //Here use Milisecond. To convert your time you can go to this(https://currentmillis.com/) website. 
     end   : 1400001400,
-    now : 1398110102,
+    now : 1398211122,
 seconds: {
 borderColor: '  #FFDF00',
 borderWidth: '3'
