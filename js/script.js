@@ -26,7 +26,7 @@ $('#video').videoBG({
     scale:true,
     zIndex:0,
     height: vidHeight,
-    padding: 0
+    background: rgb(0, 0, 0)
 });
 
 // Navbar fixing
