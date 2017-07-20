@@ -25,7 +25,8 @@ $('#video').videoBG({
     poster:'assets/poster1.jpg',
     scale:true,
     zIndex:0,
-    height: vidHeight
+    height: vidHeight,
+    padding: 0
 });
 
 // Navbar fixing
