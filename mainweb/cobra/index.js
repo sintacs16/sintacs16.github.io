@@ -6,8 +6,8 @@ var snake; //This is the snake object.
 var prey;//This is the prey object for the snake.
 var scl = 20; //This is the scale of the snake's head
 var food;//This is the snake's food.
-var canvasWidth = 1370;
-var canvasHeight = 400;
+var canvasWidth = Window.width;
+var canvasHeight = 700;
 
 //Setup function in p5.js to setup the project.
 function setup() {
