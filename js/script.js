@@ -39,11 +39,14 @@ new WOW().init();
 
 
 // Count Down Timer
-
+var currentTime = (new Date()).getTime() / 1000;
+var endTime = (new Date(2017, 07, 09, 0, 0, 0)).getTime() / 1000;
+console.log(currentTime);
+console.log(endTime);
 $('.countdown').final_countdown({
     start : 1398211122, //Here use Milisecond. To convert your time you can go to this(https://currentmillis.com/) website. 
-    end   : 1400001400,
-    now : 1398211122,
+    end   : endTime,
+    now : currentTime,
 seconds: {
 borderColor: '  #FFDF00',
 borderWidth: '3'
